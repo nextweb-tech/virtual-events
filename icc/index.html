@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/jquery.mapify.css">
+    <link rel="stylesheet" href="css/eocjs-newsticker.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/enter-popup.css">
+
+</head>
+
+<body>
+
+<header id="in-header">
+	<div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="header-menu">
+                    <li class="active"><a href="index.html">Lobby</a></li>
+
+                    <li><a href="ussishkin.html">Ussishkin</a></li>
+                    <li><a href="teddy.html">Teddy</a></li>
+
+                    <li><a href="orens.html">Orens</a></li>
+
+
+                    <li><a href="exhibition-demo.html">Exhibitions</a></li>
+                    <li><a href="lounge-demo.html"> Lounge – Hadarim Patio </a></li>
+                    <li><a href="wall.html">Wall</a></li>
+                    <li><a href="videos.html">VOD</a></li>
+                    <li><a href="eposter.html">E-Poster</a></li>
+                    <li><a href="plan.html">3D Floor Plans</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 text-right">
+                <h3>ICC  Jerusalem – Virtual Congress Center</h3>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section id="enter-page-in" style="background: #fff; position:relative">
+
+    <img class="mapclass" src="images/enter-img.jpg" width="1760" height="869" usemap="#Map" border="0" />
+    <map name="Map" id="Map">
+        <area id="videoopen" data-toggle="modal" data-target="#videoModal" data-theVideo="https://player.vimeo.com/video/441929403?title=0&byline=0&portrait=0" shape="poly" coords="181,452,162,606,449,595,458,479,181,452" href="#" alt="Area 1" title="Area 1" />
+    </map>
+
+    <a href="ussishkin.html" class="dot-btn-1 btns">
+        
+        <h3>Ussishkin</h3>
+        <h5>Auditorium</h5>
+    </a>
+    <a href="teddy.html" class="dot-btn-2 btns">
+        
+        <h3>Teddy</h3>
+        <h5>Hall</h5>
+    </a>
+    <a href="lounge-demo.html" class="dot-btn-3 btns">
+        
+        <h3 style="margin-top:44px;">Lounge<br />Hadarim</h3>
+        <h5>Patio</h5>
+    </a>
+    <a href="orens.html" class="dot-btn-5 btns">
+        
+        <h3>Orens</h3>
+        <h5>Hall</h5>
+    </a>
+    <a href="eposter.html" class="dot-btn-6 btns">
+        
+        <h3>E-Poster</h3>
+        <h5>Hall</h5>
+    </a>
+    <a href="exhibition-demo.html" class="dot-btn-7 btns">
+        
+        <h3>Exhibition</h3>
+        <h5>Entrance Hall</h5>
+    </a>
+    <a href="plan.html" class="dot-btn-8 btns">
+        
+        <h3>3D Floor</h3>
+        <h5>Plans</h5>
+    </a>
+
+</section>
+
+<section id="footer-text">
+  <div id="news">Welcome to ICC Jerusalem Virtual & Hybrid Summit </div>
+</section>
+
+<!-- ibm video Modal -->
+<div id="videoModal" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <iframe width="100%" height="328" src=""></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ibm video Modal -->
+<div id="videoModal2" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <iframe width="100%" height="328" src=""></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!--<div id="inline-popups">
+<a style="display:none;" class="enter-video-popup" href="#enter-popup" data-effect="mfp-move-from-top">Move from top</a>
+</div>
+<div id="enter-popup" class="white-popup mfp-with-anim mfp-hide">
+	<iframe src="https://www.youtube.com/embed/r4jRMeTe7SE?playlist=r4jRMeTe7SE&autoplay=1&controls=0&loop=1" width="100%" height="328" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>-->
+
+<!-- Enter videos Modal -->
+<div id="EnterVideoModal" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h3>Videos</3>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="video-gallery">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 1</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=oUqG5ISv71s"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 2</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=gsEwmumEsKU"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 3</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=aa62s8lQ2NY"></a>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 4</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=oUqG5ISv71s"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 5</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=gsEwmumEsKU"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 6</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=aa62s8lQ2NY"></a>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 4</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=oUqG5ISv71s"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 5</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=gsEwmumEsKU"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 6</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=aa62s8lQ2NY"></a>
+					  </div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+      </div>
+
+      <div class="share-cont">
+            <ul>
+              <li><a href=""><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+              <li><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a></li>
+              <li><a href=""><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a></li>
+            </ul>
+           </div>
+
+    </div>
+
+  </div>
+</div>
+<style>
+#EnterVideoModal .modal-dialog {width:850px;}
+.company-popup h3 {
+    font-size: 31px;
+    font-weight: 400;
+    margin: 0px;
+    text-align: center;
+    line-height: 1.9;
+}
+</style>
+
+
+<input type="button" value="click to toggle fullscreen" class="screen-btn" onclick="toggleFullScreen(document.body)" style="display:none;">
+<script src="js/jquery.min.js"></script>
+<script src="js/redirection-mobile.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script src="js/eocjs-newsticker.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+
+ <script>
+ window.VIDEOASK_EMBED_CONFIG = {
+   "kind": "widget",
+   "url": "https://www.videoask.com/faihb1eke",
+   "options": {
+     "widgetType": "VideoThumbnailExtraLarge",
+     "text": "Leave a message",
+     "backgroundColor": "#7D00FE",
+     "position": "bottom-left"
+   }
+ }
+ </script>
+ <script src="https://www.videoask.com/embed/embed.js"></script>
+
+<script>
+$("#enter-popup").click(function(){
+	$("#enter-popup iframe").attr("src","");
+});
+
+
+function autoPlayYouTubeModal(){
+  var trigger = $("body").find('[data-toggle="modal"]');
+  trigger.click(function() {
+    var theModal = $(this).data( "target" ),
+    videoSRC = $(this).attr( "data-theVideo" ), 
+    videoSRCauto = videoSRC+"?autoplay=1" ;
+    $(theModal+' iframe').attr('src', videoSRCauto);
+    $(theModal+' button.close').click(function () {
+        $(theModal+' iframe').attr('src', videoSRC);
+    });   
+  });
+}
+
+$(document).ready(function(){
+  autoPlayYouTubeModal();
+});
+
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+
+  $("#news").eocjsNewsticker({
+    speed: 25,
+    timeout: 0.5
+  });
+
+});
+
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();    
+});
+
+$(window).load(function() {
+	//$('.enter-video-popup').click();
+});
+
+setTimeout(function(){
+ $(".screen-btn").click();
+}, 400);
+
+$("#videoModal .close").click(function(){
+    
+  setTimeout(function(){
+  $("#videoModal .modal-content iframe").attr("src","");
+}, 800);
+
+  
+});
+
+
+$("#videoModal2 .close").click(function(){
+    
+  setTimeout(function(){
+  $("#videoModal2 .modal-content iframe").attr("src","");
+}, 800);
+  
+});
+  
+$('#inline-popups').magnificPopup({
+  delegate: 'a',
+  removalDelay: 800, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+
+// Image popups
+$('#image-popups').magnificPopup({
+  delegate: 'a',
+  type: 'image',
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+      // just a hack that adds mfp-anim class to markup 
+       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  closeOnContentClick: true,
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+
+// Hinge effect popup
+$('a.hinge').magnificPopup({
+  mainClass: 'mfp-with-fade',
+  removalDelay: 1000, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeClose: function() {
+        this.content.addClass('hinge');
+    }, 
+    close: function() {
+        this.content.removeClass('hinge'); 
+    }
+  },
+  midClick: true
+});
+</script>
+
+
+
+</body>
+
+</html>

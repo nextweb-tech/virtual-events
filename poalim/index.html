@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+
+</head>
+
+<body>
+
+<section id="enter-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-md-offset-7">
+				<div id="enter-content-cont">
+					<div id="enter-content-inner">
+						<p class="mb-50"><img src="images/logo.gif" /></p>
+						<h3>WELCOME</h3>
+
+						<form action="#" method="post" enctype="application/x-www-form-urlencoded">
+						   <fieldset>
+						      <div id="MemberLoginForm_LoginForm_Email_Holder" class="field text mb-15">
+						         <div class="middleColumn">
+						            <input type="text" name="Email" class="text form-control" autofocus="true" required="required" aria-required="true" placeholder="Email">
+						         </div>
+						      </div>
+						      <div id="MemberLoginForm_LoginForm_Password_Holder" class="field text password">
+						         <div class="middleColumn">
+						            <input type="password" name="Password" class="text password form-control" required="required" aria-required="true" autocomplete="off" placeholder="Password">
+						         </div>
+						      </div>
+						      <div id="MemberLoginForm_LoginForm_Remember_Holder" class="field checkbox be-checkbox">
+						         <input type="checkbox" name="Remember" value="1" class="checkbox" title="">
+						         <label class="right" for="MemberLoginForm_LoginForm_Remember">Remember me</label>
+						      </div>
+						      
+						   </fieldset>
+						   <div class="btn-toolbar login-submit">
+						      <a href="enter.html" class="action btn btn-primary btn-xl" onclick="toggleFullScreen(document.body)">Enter</a>
+						   </div>
+						   <p id="ForgotPassword" class="login-forgot-password splash-description"><a href="#">Forgot your password?</a></p>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+
+
+function toggleFullScreen(elem) {
+    // ## The below if statement seems to work better ## if ((document.fullScreenElement && document.fullScreenElement !== null) || (document.msfullscreenElement && document.msfullscreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
+        if (elem.requestFullScreen) {
+            elem.requestFullScreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullScreen) {
+            elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+    } else {
+        if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}
+</script>
+</body>
+
+</html>

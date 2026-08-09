@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+
+</head>
+
+<body>
+
+<header id="in-header">
+	<div class="container">
+        <div class="row">
+            <div class="col-md-2 text-left">
+                <img src="images/white-logo.png" />
+            </div>
+			<div class="col-md-10">
+                <ul id="header-menu">
+                    <li><a href="exhibition.html">Breakouts</a></li>
+					<li><a href="exhibition2.html">Startup Arena</a></li>
+                    <li class="active"><a href="halls.html">Hall A</a></li>
+                    <li><a href="halls-b.html">Hall B</a></li>
+                    <li><a href="halls-c.html">Hall C</a></li>
+                    <li><a href="halls-d.html">Hall D</a></li>
+					<li><a href="wall.html">Wall</a></li>
+                    <li><a href="https://vimeo.com/showcase/checkpointuk" target="_blank">VOD</a></li>
+					<li><a href="agenda.html">Agenda</a></li>
+					<li><a href="speakers.html">Speakers</a></li>
+                    
+					<li><a href="javascript:void(0);">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">Menu</a>
+<a href="javascript:void(0);" class="fulls-close-btn">Quick Full</a>
+<style>
+    .sidebar-control {
+        position: absolute;
+        left: 50%;
+        margin-left: -15px;
+        top: -5px;
+        z-index: 999;
+        background: rgba(0,0,0, 0);
+        padding: 10px 20px 5px 20px;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .sidebar-xs .sidebar-control {
+        top: 68px;
+    }
+
+    .sidebar-control:focus {
+        color: #fff !important;
+    }
+
+    #in-header {
+        position: fixed;
+        left: 0px;
+        width: 100%;
+        top: -74px;
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in;
+    }
+
+    .sidebar-xs #in-header {
+        position: fixed;
+        left: 0px;
+        width: 100%;
+        top: 0px;
+    }
+
+    .fullsize {
+        padding-top: 0px !important;
+    }
+
+    .fulls-close-btn {
+        top: -5px;
+        right: inherit;
+        left: 50%;
+        font-size: 12px;
+        color: #fff;
+        background: rgba(89,147,203, 1);
+        padding: 12px 20px 11px 20px;
+        width: 132px;
+        margin-left: 65px;
+        line-height: 12px;
+        border-radius: 5px;
+        height: auto;
+    }
+</style>
+
+<section id="halls-page-in">
+	<div class="halls-page-cont">
+        <div class="halls-page-inner">
+
+            <div class="contall">
+                <div class="box3 allboxs">
+                    <iframe style="position:relative; top:-55px;," width="100%" height="558" src="https://www.youtube.com/embed/j-G7QBuMXuE?autoplay=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!--<div class="question-cont">
+                    <a href="javascript:void(0);" data-toggle="modal" data-target="#myQuestion" class="fullscreen-btn">Ask Your Question</a>
+                </div>-->
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Question Modal -->
+<div id="myQuestion" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <iframe width="100%" height="750" style="border: none;" src="https://ask.ver.us/"></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+
+
+</script>
+
+<script>
+
+         $(".fullscreen-btn").click(function () {
+            $(".fulls-close-btn").attr("style", "display:block;");
+         });
+         $(".fulls-close-btn").click(function () {
+            $(".fulls-close-btn").attr("style", "display:none;");
+         });
+
+        function autoPlayYouTubeModal() {
+            var trigger = $("body").find('[data-toggle="modal"]');
+            trigger.click(function () {
+                var theModal = $(this).data("target"),
+                    videoSRC = $(this).attr("data-theVideo"),
+                    videoSRCauto = videoSRC + "?autoplay=1";
+                $(theModal + ' iframe').attr('src', videoSRCauto);
+                $(theModal + ' button.close').click(function () {
+                    $(theModal + ' iframe').attr('src', videoSRC);
+                });
+            });
+        }
+        //$(window).load(function() {
+	       // $('.enter-video-popup').click();
+        //});
+        $(document).ready(function () {
+
+            setInterval(function () {
+
+                var val = 10
+                var url = 'https://anticouphackathon.virtualmagix.com/Hall/CheckRefresh?id=' + val;
+
+                $.get(url, function (data) {
+                    if (data) {
+                        window.location.reload();
+                    }
+                })
+            },5000);
+
+            autoPlayYouTubeModal();
+                 $("#enter-popup").click(function(){
+                	$("#enter-popup iframe").attr("src","");
+                 });
+
+            var check = 0;
+
+            if (check>0) {
+                $('.enter-video-popup').click();
+                       var hallId = "10";
+                       writeLog("Hall First Popup Show ",hallId);
+            }
+
+        });
+         $(window).load(function (e) {
+            var winHeight = $(window).height();
+            $("#enter-content-cont").css("height", winHeight);
+
+            $("#news").eocjsNewsticker({
+                speed: 25,
+                timeout: 0.5
+            });
+
+        });
+
+        function writeLog(actionX, hallId) {
+            var url = 'https://anticouphackathon.virtualmagix.com/Hall/writeLog?actionX=' + actionX + '&hallId=' + hallId;
+            $.get(url, function (data) {
+                if (data == false) {
+                    console.log("Error about log writer");
+                }
+            })
+        }
+        function writeLog2(hallId) {
+            var url = 'https://anticouphackathon.virtualmagix.com/Hall/writeLog2?hallId=' + hallId;
+            $.get(url, function (data) {
+                if (data == false) {
+                    console.log("Error about log writer");
+                }
+            })
+            }
+
+        $(".meeting-button").click(function () {
+            $("#embedCode").addClass("fullsize");
+             var hallId = "10";
+            
+            writeLog("Full Scren Button", hallId);
+                //window.open(url, '_blank');
+
+        });
+
+        $(".fulls-close-btn").click(function () {
+            $("#embedCode").removeClass("fullsize");
+        });
+
+        $(window).load(function (e) {
+            var winHeight = $(window).height();
+            $("#enter-content-cont").css("height", winHeight);
+        });
+
+
+/* MenuHover Function */
+var App = function () {
+
+// Disable all transitions
+    var _transitionsDisabled = function() {
+        $('body').addClass('no-transitions');
+    };
+
+    // Enable all transitions
+    var _transitionsEnabled = function() {
+        $('body').removeClass('no-transitions');
+    };
+
+// Resize main sidebar
+    var _sidebarMainResize = function() {
+
+        // Flip 2nd level if menu overflows
+        // bottom edge of browser window
+        var revertBottomMenus = function() {
+            $('.sidebar-main').find('.nav-sidebar').children('.nav-item-submenu').hover(function() {
+                var totalHeight = 0,
+                    $this = $(this),
+                    navSubmenuClass = 'nav-group-sub',
+                    navSubmenuReversedClass = 'nav-item-submenu-reversed';
+
+                totalHeight += $this.find('.' + navSubmenuClass).filter(':visible').outerHeight();
+                if($this.children('.' + navSubmenuClass).length) {
+                    if(($this.children('.' + navSubmenuClass).offset().top + $this.find('.' + navSubmenuClass).filter(':visible').outerHeight()) > document.body.clientHeight) {
+                        $this.addClass(navSubmenuReversedClass)
+                    }
+                    else {
+                        $this.removeClass(navSubmenuReversedClass)
+                    }
+                }
+            });
+        }
+
+        // If sidebar is resized by default
+        if($('body').hasClass('sidebar-xs')) {
+            revertBottomMenus();
+        }
+
+        // Toggle min sidebar class
+        $('.sidebar-main-toggle').on('click', function (e) {
+            e.preventDefault();
+
+            $('body').toggleClass('sidebar-xs').removeClass('sidebar-mobile-main');
+            revertBottomMenus();
+        });
+    };
+
+	/* ----------------------------- */
+	return {
+
+        // Disable transitions before page is fully loaded
+        initBeforeLoad: function() {
+            _transitionsDisabled();
+        },
+
+        // Enable transitions when page is fully loaded
+        initAfterLoad: function() {
+            _transitionsEnabled();
+        },
+
+        // Initialize all sidebars
+        initSidebars: function() {
+
+            // On desktop
+            _sidebarMainResize();
+        },
+
+        // Initialize all navigations
+        initNavigations: function() {
+            _navigationSidebar();
+            _navigationNavbar();
+        },
+
+        // Initialize core
+        initCore: function() {
+            App.initSidebars();
+        }
+    }
+
+}();
+
+// When content is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    App.initBeforeLoad();
+    App.initCore();
+});
+
+// When page is fully loaded
+window.addEventListener('load', function() {
+    App.initAfterLoad();
+
+});
+
+$('#inline-popups').magnificPopup({
+  delegate: 'a',
+  removalDelay: 800, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+
+// Image popups
+$('#image-popups').magnificPopup({
+  delegate: 'a',
+  type: 'image',
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+      // just a hack that adds mfp-anim class to markup
+       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  closeOnContentClick: true,
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+
+// Hinge effect popup
+$('a.hinge').magnificPopup({
+  mainClass: 'mfp-with-fade',
+  removalDelay: 1000, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeClose: function() {
+        this.content.addClass('hinge');
+    },
+    close: function() {
+        this.content.removeClass('hinge');
+    }
+  },
+  midClick: true
+});
+
+/* MenuHover Function */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="css/eocjs-newsticker.css">
+	<link rel="stylesheet" href="css/diyabet.css">
+	<style>
+		#in-header::after {background: rgba(5,130,212, 1)}
+		#header-menu li.active a {color: #fcee20 !important;}
+		#header-menu li.active::after {background: #fcee20;}
+		#header-menu li a {color: #fff;}
+		#enter-page::after {background: rgba(5,130,212, .5);}
+		
+		.schedule-box .tab-buttons .tab-btn.active, .schedule-box .tab-buttons .tab-btn:hover {border-color: #5e6b77;background: #5e6b77;color: #ffffff;}
+		.schedule-box .tab-buttons .tab-btn .curve::after {border-top-color: #5e6b77;}
+		.schedule-box .tab-buttons .tab-btn {background: #ffffff;color: #009fe3;}
+		.schedule-box .hour-box .toggle-btn h3::after {color: #009fe3;}
+		.hour-box.active-box .hour {color: #009fe3 !important;}
+		.schedule-box .hour-box.active-box .circle {border-color: #009fe3;}
+		.schedule-box .hour-box.active-box::before { background: #009fe3;}
+		.toggle-btn.active h3 {color: #009fe3 !important;}
+		.share-cont {background: #273958;color: #fff;}
+		.agenda-dates {background: #17b5e4;color: #fff !important;}
+		.agenda-carousel-date1 {background: #6a9ff7; color: #fff;}
+		.color1 {color: #17b5e4 !important;}
+		.agenda-list a::after {color: #17b5e4;}
+		.agenda-buttons a {border: solid 1px #16b5e6;}
+		.agenda-buttons a.active {color: #fff !important;background: #16b5e6;}
+		.agenda-buttons a {border: solid 1px #16b5e6; color: #16b5e6;}
+	</style>
+	
+</head>
+
+<body>
+
+<header id="header" class="pt-10 pb-10 mb-show">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 col-xs-2">
+				<nav class="navbar navbar-top pl-0 pr-0">
+				  <a id="menu-icon" class="menu-toggler btn btn-line-a py-3 py-md-0" href="#">
+					<span class="icon icon-menu icon-menu-a">
+					  <span class="bars">
+						<span class="bar1"></span>
+						<span class="bar2"></span>
+						<span class="bar3"></span>
+					  </span>
+					</span>
+				  </a>
+				</nav>
+				<!-- End of navbar-top -->
+
+				<!-- Begin of navfull-menu -->
+				<nav id="navfull-menu" class="navfull navfull-menu navigation menu-behavior">
+				  <div class="navbar-group group-bg">
+					<img src="images/mb-logo.png">
+					<ul class="navbar-nav nav-menu menu-close font-title fw-bold">
+						<li class="nav-item"><a href="">Program</a></li>
+						<li class="nav-item"><a href="">Salonlar</a></li>
+						<li class="nav-item"><a href="">Posterler</a></li>
+						<li class="nav-item"><a href="">Stand Alanı</a></li>
+						<li class="nav-item"><a href="">Network Alanı<br />Özel Toplantılar</a></li>
+						<li class="nav-item"><a href="">Uydu Sempozyumları</a></li>
+						<li class="nav-item"><a href="">Sponsorlar</a></li>
+						<li class="nav-item"><a href="">Lobi</a></li>
+						<li class="nav-item"><a class="live-classic-btn" href="javascript:void(0);">Live Chat</a></li>
+						<li class="mt-15"><a class="live-btn" href="javascript:void(0);">Live Chat</a></li>
+					</ul>
+				  </div>
+				</nav>
+			</div>
+			<div class="col-sm-5 col-xs-4 p-0">
+				<img class="main-logo" src="images/white-logo.png">
+			</div>
+			<div class="col-sm-5 col-xs-6 text-right user-ent-cont pl-0">
+				<div class="row">
+				
+					<div class="col-md-12">
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-bell-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+										
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a>
+								</div>
+							</li>
+						</ul>
+						
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+								<i class="fa fa-envelope-o align-self-center topbar-icon" aria-hidden="true"></i> 
+								<span class="badge badge-danger badge-pill noti-icon-badge">2</span>
+							</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a>
+								</div>
+							</li>
+						</ul>
+						
+						<ul>
+							<li class="dropdown">
+							  <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							  <img src="images/sales2.jpg" alt="profile-user" class="rounded-circle">
+							  <img class="up-icon" src="images/up-icon.gif" />
+							  </a>
+							  <div class="dropdown-menu dropdown-menu-right">
+								 <div class="profile-details pl-30 pr-30">
+									<div class="row">
+										<div class="col-md-4 col-xs-4 p-0">
+											<img src="images/sales2-new.jpg" alt="" class="rounded-circle">
+										</div>
+										<div class="col-md-8 col-xs-8 pr-0">
+											<h3 class="mb-10 mt-40">Shlomi ASHKENAZI</h3>
+											<a href="my-profile.html">View Profile</a>
+										</div>
+									</div>
+								 </div>
+								 <a class="dropdown-item" href="#">Edit</a> 
+								 <a class="dropdown-item" href="#">Password</a>
+								 <a class="dropdown-item" href="#">Change Profile Picture</a>
+								 <a class="dropdown-item" href="#">Cover Photo</a>
+								 <a class="dropdown-item" href="#">E-mail Notifications</a>
+								 <a class="dropdown-item" href="#">Download</a>
+								 <a class="dropdown-item" href="#">Delete</a>
+								 <div class="dropdown-divider mb-0"></div>
+								 <a class="dropdown-item logout" href="#">Logout</a>
+							  </div>
+						   </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<header id="in-header" class="mb-hide">
+	<div class="pl-50 pr-50 pl-xs-15 pr-xs-15">
+        <div class="row">
+            <div class="col-md-2 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+			<div class="col-md-8 text-center">
+                <ul id="header-menu">
+                    <li><a href="bilimsel-program.html">Program</a></li>
+                    <li><a href="">Salonlar</a></li>
+                    <li><a href="">Posterler</a></li>
+                    <li><a href="">Stand Alanı</a></li>
+                    <li><a href="">Network Alanı<br />Özel Toplantılar</a></li>
+                    <li><a href="">Uydu Sempozyumları</a></li>
+                    <li><a href="">Sponsorlar</a></li>
+                    <li><a href="index.html">Lobi</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-right user-ent-cont">
+				<div class="row">
+				
+					<div class="col-md-12">
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-bell-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a>
+								</div>
+							</li>
+						</ul>
+						
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-envelope-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a></div>
+							</li>
+						</ul>
+						
+						<ul>
+							<li class="dropdown">
+							  <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							  <img src="images/sales2.jpg" alt="profile-user" class="rounded-circle">
+							  <img class="up-icon" src="images/up-icon.gif" />
+							  </a>
+							  <div class="dropdown-menu dropdown-menu-right">
+								 <div class="profile-details pl-30 pr-30">
+									<div class="row">
+										<div class="col-md-4 col-xs-4 p-0">
+											<img src="images/sales2-new.jpg" alt="" class="rounded-circle">
+										</div>
+										<div class="col-md-8 col-xs-8 pr-0">
+											<h3 class="mb-10 mt-40">Shlomi ASHKENAZI</h3>
+											<a href="my-profile.html">View Profile</a>
+										</div>
+									</div>
+								 </div>
+								 <a class="dropdown-item" href="#">Edit</a> 
+								 <a class="dropdown-item" href="#">Password</a>
+								 <a class="dropdown-item" href="#">Change Profile Picture</a>
+								 <a class="dropdown-item" href="#">Cover Photo</a>
+								 <a class="dropdown-item" href="#">E-mail Notifications</a>
+								 <a class="dropdown-item" href="#">Download</a>
+								 <a class="dropdown-item" href="#">Delete</a>
+								 <div class="dropdown-divider mb-0"></div>
+								 <a class="dropdown-item logout" href="#">Logout</a>
+							  </div>
+						   </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+</header>
+
+<section id="inner-headers" class="pt-0 pb-10 mb-show full-size">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 col-xs-2"><a href="javascript:history.back();"><img src="images/mb-lobi-icon-white.png" /></a></div>
+			<div class="col-sm-10 col-xs-10 pl-0"><h3>Agenda</h3></div>
+		</div>
+	</div>
+</section>
+<section id="footer-text" class="mb-show">
+  <div id="news">Welcome to the Vırtual Summıt orgınazed by eventmagıx</div>
+</section>
+
+<section id="enter-page" class="ozel-toplantilar">
+	
+	<div class=" home-program-v2 pt-100">
+	   <div class="container">
+	     
+			<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="schedule-box clearfix p-30 pb-0">
+					<div class="row">
+						 <div class="col-md-12 mb-30">
+							<h2 class="fullscreen-btn bilimsel-btns" style="font-size:25px;">7 KASIM 2020, CUMARTESİ</h2>
+						 </div>
+						 <div class="col-md-6 mb-30">
+							<a href="javascript:void(0);" target="_blank">
+								<img src="images/ozel-toplantilar1.jpg" />
+							</a>
+						 </div>
+						 <div class="col-md-6 mb-30">
+							<a href="javascript:void(0);" target="_blank">
+								<img src="images/ozel-toplantilar2.jpg" />
+							</a>
+						 </div>
+					 </div>
+					<div class="row mt-30">
+						 <div class="col-md-12 mb-30">
+							<h2 class="fullscreen-btn bilimsel-btns" style="font-size:25px;">8 KASIM 2020, PAZAR</h2>
+						 </div>
+						 <div class="col-md-6 mb-30">
+							<a href="javascript:void(0);" target="_blank">
+								<img src="images/ozel-toplantilar1.jpg" />
+							</a>
+						 </div>
+						 <div class="col-md-6 mb-30">
+							<a href="javascript:void(0);" target="_blank">
+								<img src="images/ozel-toplantilar2.jpg" />
+							</a>
+						 </div>
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+	   </div>
+	</div>
+
+</section>
+<style>
+.bilimsel-btns{width:100%; text-align:center; line-height:1.4 !important; padding-top:10px; padding-bottom:10px;}
+</style>
+
+<div id="metabolizmaPopup" class="modal fade company-popup" role="dialog">
+		<div class="modal-dialog ">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header" style="height:auto;">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h3>56. Ulusal Diyabet Metabolizma ve Beslenme Hastalıkları Kongresi</h3>
+				</div>
+				<div class="modal-body pt-30">
+					<div class="row">
+						 <div class="col-md-4 mb-30">
+							<a href="javascript:void(0);" class="fullscreen-btn bilimsel-btns m-0">06 Kasım</a>
+						 </div>
+						 <div class="col-md-4 mb-30">
+							<a href="javascript:void(0);" class="fullscreen-btn bilimsel-btns m-0">07 Kasım</a>
+						 </div>
+						 <div class="col-md-4 mb-30">
+							<a href="javascript:void(0);" class="fullscreen-btn bilimsel-btns m-0">08 Kasım</a>
+						 </div>
+						 <div class="col-md-4 mb-30">
+							<a href="javascript:void(0);" class="fullscreen-btn bilimsel-btns m-0">09 Kasım</a>
+						 </div>
+						 <div class="col-md-4 mb-30">
+							<a href="javascript:void(0);" class="fullscreen-btn bilimsel-btns m-0">10 Kasım</a>
+						 </div>
+					 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<link rel="stylesheet" type="text/css" href="css/programv2/programv2.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script src="js/eocjs-newsticker.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+	$("#news").eocjsNewsticker({
+		speed: 25,
+		timeout: 0.5
+	  });
+});
+
+
+</script>
+<script>
+$(".schedule-box .tab-btn").on("click", function () {
+    var target = $($(this).attr("data-id"));
+    $(".schedule-box .tab-btn").removeClass("active");
+    $(this).addClass("active");
+    $(".schedule-box .tab").fadeOut(0);
+    $(".schedule-box .tab").removeClass("current");
+    $(target).fadeIn(300);
+    $(target).addClass("current");
+    var windowWidth = $(window).width();
+    if (windowWidth <= 700) {
+        $("html, body").animate({ scrollTop: $(".tabs-box").offset().top }, 1000);
+    }
+});
+$(".schedule-box .hour-box .toggle-btn").on("click", function () {
+    var target = $($(this).next(".content-box"));
+    $(this).toggleClass("active");
+    $(target).slideToggle(300);
+    $(target).parents(".hour-box").toggleClass("active-box");
+});
+</script>
+</body>
+
+</html>

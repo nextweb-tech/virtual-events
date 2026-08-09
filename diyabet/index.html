@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/jquery.mapify.css">
+    <link rel="stylesheet" href="css/eocjs-newsticker.css">
+    <link rel="stylesheet" href="css/diyabet.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+</head>
+
+<body>
+<style>
+#in-header:after{background: rgba(5,130,212, 1);}
+#header-menu li hover:after{background:#fcee20;}
+#header-menu li.active a{color:#fcee20 !important;}
+#header-menu li.active:after{background:#fcee20;}
+#header-menu li a{color:#fff;}
+#header-menu li a:hover{color:#fcee20;}
+
+/* Panel css */
+.buybtn-panel { position: fixed; z-index: 999; bottom: 50px; right: 0; padding: 20px 50px 20px 20px; background: rgba(5,130,212, .9); 
+	-webkit-transition: right .3s ease-out; transition: right .3s ease-out; top:0px;}
+.buybtn-close { position: absolute; top: 0; cursor: pointer; display: block; height: 80px; width: 30px; right: 0; font-size: 18px; 
+	color:#fff; line-height: 80px; border-right: 1px solid rgba(255,255,255,.16); padding: 0; text-align: center}
+.buybtn-close:before { content: "\00d7"}
+.buybtn-close:hover { color: rgba(255,255,255,.9)}
+.buybtn-cta { background: #0ca919; border-radius: 2px; padding: 10px 20px; color: #fff; font-weight: 600; font-size: 12px; width: 160px; 
+	display: inline-block; text-align: center}
+.buybtn-cta span { opacity: .5; display: inline-block; border-right: 1px solid #fff; width: 1px; margin: 0 7px; height: 20px; vertical-align: middle;}
+.buybtn-cta:hover,
+.buybtn-cta:focus {background: #179f07;color: #fff;}
+.buybtn-panel.is-hidden { right: -200px;}
+.buybtn-panel.is-hidden .buybtn-close:before { content: "\f0a2"; font-size: 24px; font-weight: 900; font-family: 'FontAwesome';}
+
+.buybtn-panel{background: rgba(5,130,212, .9); bottom: 0; width:400px;}
+.buybtn-close {background: rgba(5,130,212, 1); left: -45px; top: calc(50% - 40px); width: 45px;}
+.buybtn-panel.is-hidden {right: -400px;}
+.features-panel {color: #fff;}
+.features-panel h3 {text-align: center; color: #fff; font-size:26px;}
+.features-panel ul {color: #fff; margin-bottom: 20px;}
+.buybtn-cta {float: right;}
+.features-panel ul.fancy-list li {border-top: 1px solid #fff; padding: 10px 0;}
+@media (max-width: 767px) {
+	.buybtn-panel {width: 300px; padding: 20px 30px 20px 20px;}
+	.buybtn-panel.is-hidden {right: -300px;}
+}
+</style>
+
+<header id="header" class="pt-10 pb-10 mb-show">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 col-xs-2">
+				<nav class="navbar navbar-top pl-0 pr-0">
+				  <a id="menu-icon" class="menu-toggler btn btn-line-a py-3 py-md-0" href="#">
+					<span class="icon icon-menu icon-menu-a">
+					  <span class="bars">
+						<span class="bar1"></span>
+						<span class="bar2"></span>
+						<span class="bar3"></span>
+					  </span>
+					</span>
+				  </a>
+				</nav>
+				<!-- End of navbar-top -->
+
+				<!-- Begin of navfull-menu -->
+				<nav id="navfull-menu" class="navfull navfull-menu navigation menu-behavior">
+				  <div class="navbar-group group-bg">
+					<img src="images/mb-logo.png">
+					<ul class="navbar-nav nav-menu menu-close font-title fw-bold">
+						<li class="nav-item"><a href="">Program</a></li>
+						<li class="nav-item"><a href="">Salonlar</a></li>
+						<li class="nav-item"><a href="">Posterler</a></li>
+						<li class="nav-item"><a href="">Stand Alanı</a></li>
+						<li class="nav-item"><a href="">Network Alanı<br />Özel Toplantılar</a></li>
+						<li class="nav-item"><a href="">Uydu Sempozyumları</a></li>
+						<li class="nav-item"><a href="">Sponsorlar</a></li>
+						<li class="nav-item"><a href="">Lobi</a></li>
+						<li class="nav-item"><a class="live-classic-btn" href="javascript:void(0);">Live Chat</a></li>
+						<li class="mt-15"><a class="live-btn" href="javascript:void(0);">Live Chat</a></li>
+					</ul>
+				  </div>
+				</nav>
+			</div>
+			<div class="col-sm-5 col-xs-4 p-0">
+				<img class="main-logo" src="images/white-logo.png">
+			</div>
+			<div class="col-sm-5 col-xs-6 text-right user-ent-cont pl-0">
+				<div class="row">
+				
+					<div class="col-md-12">
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-bell-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+										
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a>
+								</div>
+							</li>
+						</ul>
+						
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+								<i class="fa fa-envelope-o align-self-center topbar-icon" aria-hidden="true"></i> 
+								<span class="badge badge-danger badge-pill noti-icon-badge">2</span>
+							</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a>
+								</div>
+							</li>
+						</ul>
+						
+						<ul>
+							<li class="dropdown">
+							  <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							  <img src="images/sales2.jpg" alt="profile-user" class="rounded-circle">
+							  <img class="up-icon" src="images/up-icon.gif" />
+							  </a>
+							  <div class="dropdown-menu dropdown-menu-right">
+								 <div class="profile-details pl-30 pr-30">
+									<div class="row">
+										<div class="col-md-4 col-xs-4 p-0">
+											<img src="images/sales2-new.jpg" alt="" class="rounded-circle">
+										</div>
+										<div class="col-md-8 col-xs-8 pr-0">
+											<h3 class="mb-10 mt-40">Shlomi ASHKENAZI</h3>
+											<a href="my-profile.html">View Profile</a>
+										</div>
+									</div>
+								 </div>
+								 <a class="dropdown-item" href="#">Edit</a> 
+								 <a class="dropdown-item" href="#">Password</a>
+								 <a class="dropdown-item" href="#">Change Profile Picture</a>
+								 <a class="dropdown-item" href="#">Cover Photo</a>
+								 <a class="dropdown-item" href="#">E-mail Notifications</a>
+								 <a class="dropdown-item" href="#">Download</a>
+								 <a class="dropdown-item" href="#">Delete</a>
+								 <div class="dropdown-divider mb-0"></div>
+								 <a class="dropdown-item logout" href="#">Logout</a>
+							  </div>
+						   </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<header id="in-header" class="mb-hide">
+	<div class="pl-50 pr-50 pl-xs-15 pr-xs-15">
+        <div class="row">
+            <div class="col-md-2 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+			<div class="col-md-8 text-center">
+                <ul id="header-menu">
+                    <li><a href="bilimsel-program.html">Program</a></li>
+                    <li><a href="">Salonlar</a></li>
+                    <li><a href="">Posterler</a></li>
+                    <li><a href="">Stand Alanı</a></li>
+                    <li><a href="">Network Alanı<br />Özel Toplantılar</a></li>
+                    <li><a href="">Uydu Sempozyumları</a></li>
+                    <li><a href="">Sponsorlar</a></li>
+                    <li><a href="index.html">Lobi</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-right user-ent-cont">
+				<div class="row">
+				
+					<div class="col-md-12">
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-bell-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a>
+								</div>
+							</li>
+						</ul>
+						
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-envelope-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a></div>
+							</li>
+						</ul>
+						
+						<ul>
+							<li class="dropdown">
+							  <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							  <img src="images/sales2.jpg" alt="profile-user" class="rounded-circle">
+							  <img class="up-icon" src="images/up-icon.gif" />
+							  </a>
+							  <div class="dropdown-menu dropdown-menu-right">
+								 <div class="profile-details pl-30 pr-30">
+									<div class="row">
+										<div class="col-md-4 col-xs-4 p-0">
+											<img src="images/sales2-new.jpg" alt="" class="rounded-circle">
+										</div>
+										<div class="col-md-8 col-xs-8 pr-0">
+											<h3 class="mb-10 mt-40">Shlomi ASHKENAZI</h3>
+											<a href="my-profile.html">View Profile</a>
+										</div>
+									</div>
+								 </div>
+								 <a class="dropdown-item" href="#">Edit</a> 
+								 <a class="dropdown-item" href="#">Password</a>
+								 <a class="dropdown-item" href="#">Change Profile Picture</a>
+								 <a class="dropdown-item" href="#">Cover Photo</a>
+								 <a class="dropdown-item" href="#">E-mail Notifications</a>
+								 <a class="dropdown-item" href="#">Download</a>
+								 <a class="dropdown-item" href="#">Delete</a>
+								 <div class="dropdown-divider mb-0"></div>
+								 <a class="dropdown-item logout" href="#">Logout</a>
+							  </div>
+						   </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+</header>
+
+<section id="enter-page-in" style="background: #fff;">
+	<img class="mb-show" width="100%" src="images/mb-header-img.jpg">
+    <img class="mapclass mb-hide" src="images/enter-img.jpg" width="1760" height="869" usemap="#Map" border="0" />
+<map name="Map" id="Map" class="mb-hide">
+  <area shape="poly" coords="565,473,560,544,705,547,706,481,565,473" href="#" />
+  <area shape="poly" coords="1082,481,1083,548,1231,544,1224,471,1082,481" href="#" />
+  <area shape="poly" coords="284,586,279,645,321,643,328,587,283,586" href="#" />
+  <area shape="poly" coords="374,588,368,641,406,644,409,588,375,589" href="#" />
+  <area shape="poly" coords="1382,587,1385,643,1425,643,1424,588,1382,587" href="#" />
+  <area shape="poly" coords="1468,587,1472,645,1520,644,1513,586,1469,587" href="" />
+  <area class="image-link" shape="poly" coords="154,265,105,657,199,653,240,288,155,265" href="images/hall-1.png" />
+  <area class="image-link" shape="poly" coords="244,330,228,499,533,523,538,387,244,330" href="images/hall-2.jpg" />
+  <area shape="poly" coords="598,559,597,616,709,617,711,560,597,559" href="#" />
+  <area class="image-link" shape="poly" coords="724,547,720,649,790,649,792,545,722,546" href="images/hall-3.jpg" />
+  <area shape="poly" coords="813,570,813,637,976,635,976,569,813,569" href="#" />
+  <area class="image-link" shape="poly" coords="1081,559,1082,630,1248,630,1243,558,1082,559" href="images/hall-4.jpg" />
+  <area class="image-link" shape="poly" coords="1062,407,1062,456,1287,439,1285,385,1062,407" href="images/hall-5.png" />
+  <area class="image-link" shape="poly" coords="1315,377,1326,512,1434,504,1421,359,1314,377" href="images/hall-6.png" />
+  <area class="image-link" shape="poly" coords="1448,263,1472,502,1593,487,1564,227,1448,263" href="images/hall-7.png" />
+</map>
+
+	<a href="" class="ekitap-btn btns mb-hide">E-KİTAP</a>
+	<a href="" class="ozeltoplantilar-btn btns mb-hide">ÖZEL<br /><span>TOPLANTILAR</span></a>
+
+</section>
+
+<section id="footer-text">
+  <div id="news">Welcome to the Vırtual Summıt orgınazed by eventmagıx</div>
+</section>
+
+<section id="icons-cont" class="pt-15 pb-30 mb-show">
+	<div class="container">
+		<div class="row mb-15">
+			<div class="col-sm-11 col-xs-11 text-center pr-0"><h3>Virtual Lobby</h3></div>
+			<div class="col-sm-1 col-xs-1 p-0"><a href=""><img src="images/mb-lobi-icon.png" /></a></div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+				<div class="row">
+					<div class="col-sm-4 col-xs-4 icon-box1">
+						<div class="boxes-icon text-center">
+							<a href="halls.html">
+								<img src="images/mb-icon1.png" />
+								<h4 class="mb-0 mt-10">Halls</h4>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4 col-xs-4 icon-box2">
+						<div class="boxes-icon text-center">
+							<a href="exhibition.html">
+								<img src="images/mb-icon2.png" />
+								<h4 class="mb-0 mt-10">Exhibition</h4>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4 col-xs-4 icon-box3">
+						<div class="boxes-icon text-center">
+							<a href="agenda.html">
+								<img src="images/mb-icon3.png" />
+								<h4 class="mb-0 mt-10">Agenda</h4>
+							</a>
+						</div>
+					</div>
+					
+					<div class="col-sm-4 col-xs-4 icon-box4">
+						<div class="boxes-icon text-center">
+							<a href="notification.html">
+								<img src="images/mb-icon4.png" />
+								<h4 class="mb-0 mt-10">Notification</h4>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4 col-xs-4 icon-box5">
+						<div class="boxes-icon text-center">
+							<a href="speakers.html">
+								<img src="images/mb-icon5.png" />
+								<h4 class="mb-0 mt-10">Speakers</h4>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4 col-xs-4 icon-box6">
+						<div class="boxes-icon text-center">
+							<a href="eposters.html">
+								<img src="images/mb-icon6.png" />
+								<h4 class="mb-0 mt-10">E-poster</h4>
+							</a>
+						</div>
+					</div>
+					
+					<div class="col-sm-4 col-xs-4 icon-box7">
+						<div class="boxes-icon text-center">
+							<a href="sponsors.html">
+								<img src="images/mb-icon7.png" />
+								<h4 class="mb-0 mt-10">Sponsors</h4>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4 col-xs-4 icon-box8">
+						<div class="boxes-icon text-center">
+							<a href="information.html">
+								<img src="images/mb-icon8.png" />
+								<h4 class="mb-0 mt-10">Information</h4>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4 col-xs-4 icon-box9">
+						<div class="boxes-icon text-center">
+							<a href="company.html">
+								<img src="images/mb-icon9.png" />
+								<h4 class="mb-0 mt-10">IBM</h4>
+							</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="row mt-15">
+			<div class="col-sm-12 col-xs-12 text-center"><a class="live-btn2 text-center" href="javascript:void(0);">Live Chat</a></div>
+		</div>
+	</div>
+</section>
+
+<!-- ibm video Modal -->
+<div id="videoModal" class="modal fade company-popup mb-hide" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <iframe width="100%" height="328" src=""></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ibm video Modal -->
+<div id="videoModal2" class="modal fade company-popup mb-hide" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <iframe width="100%" height="328" src=""></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<style>
+.players canvas {
+  display: none;
+  height: 150px;
+  width: 250px;
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  margin-left: -125px;
+  margin-top: -75px;
+  background: white;
+}
+
+#back {
+  position: relative;
+  z-index:9;
+}
+
+.bar {
+  background: black;
+  position: fixed;
+  width: 50px;
+  top: 50%;
+  margin-top: -50px;
+  left: 50%;
+  cursor: pointer;
+  transition: height 2s;
+}
+
+.bar1 {
+  margin-left: -85px;
+  display:none;
+}
+
+.bar2 {
+  margin-left: -25px;
+  display:none;
+}
+
+.bar3 {
+  margin-left: 35px;
+  display:none;
+}
+
+.bar1Anim {
+  width: 50px;
+  -webkit-animation-name: bar1Animation;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: .85s;
+}
+
+.bar2Anim {
+  width: 50px;
+  -webkit-animation-name: bar2Animation;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: .85s;
+}
+
+.bar3Anim {
+  width: 50px;
+  -webkit-animation-name: bar3Animation;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: .85s;
+}
+
+.stopped {
+  width: 50px;
+  -webkit-animation-name: StoppedAnimation;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-duration: .85s;
+}
+
+@-webkit-keyframes bar1Animation {
+  0% {
+    height: 0px;
+    margin-top: 50px;
+  }
+  20% {
+    height: 70px;
+    margin-top: -20px;
+  }
+  50% {
+    height: 50px;
+    margin-top: 0px;
+  }
+  60% {
+    height: 80px;
+    margin-top: -30px;
+  }
+  80% {
+    height: 60px;
+    margin-top: -10px;
+  }
+  100% {
+    height: 0px;
+    margin-top: 50px;
+  }
+}
+@-webkit-keyframes bar2Animation {
+  0% {
+    height: 0px;
+    margin-top: 50px;
+  }
+  20% {
+    height: 30px;
+    margin-top: 20px;
+  }
+  40% {
+    height: 100px;
+    margin-top: -50px;
+  }
+  60% {
+    height: 60px;
+    margin-top: -10px;
+  }
+  80% {
+    height: 70px;
+    margin-top: -20px;
+  }
+  100% {
+    height: 0px;
+    margin-top: 50px;
+  }
+}
+@-webkit-keyframes bar3Animation {
+  0% {
+    height: 20px;
+    margin-top: 30px;
+  }
+  20% {
+    height: 70px;
+    margin-top: -20px;
+  }
+  40% {
+    height: 60px;
+    margin-top: -10px;
+  }
+  60% {
+    height: 10px;
+    margin-top: 40px;
+  }
+  80% {
+    height: 70px;
+    margin-top: -20px;
+  }
+  100% {
+    height: 20px;
+    margin-top: 30px;
+  }
+}
+@-webkit-keyframes StoppedAnimation {
+  0% {
+    height: 50px;
+    margin-top: 0px;
+  }
+  20% {
+    height: 0px;
+    margin-top: 50px;
+  }
+  40% {
+    height: 0px;
+    margin-top: 50px;
+  }
+  60% {
+    height: 0px;
+    margin-top: 50px;
+  }
+  80% {
+    height: 0px;
+    margin-top: 50px;
+  }
+  100% {
+    height: 0px;
+    margin-top: 50px;
+  }
+}
+.pause {
+  text-align: center;
+  cursor: pointer;
+  font-size:20px;
+  color: #fff;
+  transition: 0.3s;
+  position:relative;
+  top:21px;
+}
+</style>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/mb-menu.js"></script>
+<script src="js/redirection-mobile.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script src="js/eocjs-newsticker.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script>
+
+$(document).ready(function() {
+  $('.image-link').magnificPopup({type:'image'});
+});
+
+function autoPlayYouTubeModal(){
+  var trigger = $("body").find('[data-toggle="modal"]');
+  trigger.click(function() {
+    var theModal = $(this).data( "target" ),
+    videoSRC = $(this).attr( "data-theVideo" ), 
+    videoSRCauto = videoSRC+"?autoplay=1" ;
+    $(theModal+' iframe').attr('src', videoSRCauto);
+    $(theModal+' button.close').click(function () {
+        $(theModal+' iframe').attr('src', videoSRC);
+    });   
+  });
+}
+
+$(document).ready(function(){
+  autoPlayYouTubeModal();
+});
+
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+
+  $("#news").eocjsNewsticker({
+    speed: 25,
+    timeout: 0.5
+  });
+
+});
+
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+    
+});
+
+setTimeout(function(){
+ $(".screen-btn").click();
+}, 400);
+
+$("#videoModal .close").click(function(){
+    
+  setTimeout(function(){
+  $("#videoModal .modal-content iframe").attr("src","");
+}, 800);
+  
+});
+
+$("#videoModal2 .close").click(function(){
+    
+  setTimeout(function(){
+  $("#videoModal2 .modal-content iframe").attr("src","");
+}, 800);
+  
+});
+
+</script>
+<script>var Chatbot={appId:"sc180abb8-c49d-4f01-999c-fc242164f787",mode:"livechat"};!function(t,a){var e=function(){(e.q=e.q||[]).push(arguments)};e.q=e.q||[],t.ChatbotApi=e;!function(){var t=a.createElement("script");t.type="text/javascript",t.async=1,t.src="https://widget.installchatbot.com/static/js/widget.js";var e=a.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();}(window,document)</script>
+
+<script>
+
+$(document).ready(function(e) {
+
+  $(".live-btn2, .live-btn, .live-classic-btn").click(function(){
+	$(".bs-chatbot-fab__nJAOV").click();
+  });
+    
+});
+
+</script>
+
+<script>
+	jQuery(window).load(function($) {
+		var closeBtn = jQuery('#buybtn-close'),
+			panel = closeBtn.parent();
+		setTimeout(function(){
+			panel.addClass('is-hidden');
+		}, 1500);
+		closeBtn.on('click', function(){
+			panel.toggleClass('is-hidden');
+		})
+	});
+</script>
+
+</body>
+
+</html>

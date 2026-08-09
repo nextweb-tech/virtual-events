@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="css/eocjs-newsticker.css">
+	<style>
+		#in-header::after {background: rgba(5,130,212, 1)}
+		#header-menu li.active a {color: #fcee20 !important;}
+		#header-menu li.active::after {background: #fcee20;}
+		#header-menu li a {color: #fff;}
+		#enter-page::after {background: rgba(5,130,212, .5);}
+	</style>
+	<link rel="stylesheet" type="text/css" href="load/skin_modern_silver.css"/>
+	<link rel="stylesheet" type="text/css" href="load/html_content.css"/>
+	<script type="text/javascript" src="java/FWDUltimate3DCarousel.js"></script>
+	<!-- Setup the carousel (all settings are explained in detail in the documentation files) -->
+		<script type="text/javascript">
+			var carousel;
+			
+			FWDRLU3DCUtils.onReady(function(){
+				carousel = new FWDUltimate3DCarousel({
+					
+					//required settings
+					carouselHolderDivId:"myDiv",
+					carouselDataListDivId:"carouselData",
+					displayType:"fixed",
+					autoScale:"yes",
+					carouselWidth:1920,
+					carouselHeight:888,
+					mainFolderPath:"load",
+					skinPath:"skin_modern_warm",
+					initializeOnlyWhenVisible:"no",
+												
+					//main settings
+					backgroundColor:"transparent",
+					backgroundImagePath:"",
+					thumbnailsBackgroundImagePath:"",
+					scrollbarBackgroundImagePath:"",
+					backgroundRepeat:"repeat-x",
+					carouselStartPosition:"center",
+					carouselTopology:"ring",
+					carouselXRadius:600,
+					carouselYRadius:0,
+					carouselXRotation:10,
+					carouselYOffset:0,
+					showCenterImage:"no",
+					centerImagePath:"load/media/logo.png",
+					centerImageYOffset:0,
+					showDisplay2DAlways:"no",
+					slideshowDelay:5000,
+					autoplay:"no",
+					showPrevButton:"yes",
+					showNextButton:"yes",
+					showSlideshowButton:"yes",
+					disableNextAndPrevButtonsOnMobile:"no",
+					showLargeNextAndPrevButtons:"no",
+					largeNextAndPrevButtonsOffest:15,
+					controlsMaxWidth:940,
+					controlsHeight:31,
+					controlsPosition:"bottom",
+					slideshowTimerColor:"#777777",
+					rightClickContextMenu:"developer",
+					addKeyboardSupport:"yes",
+					useDragAndSwipe:"yes",
+												
+					//thumbnail settings
+					thumbnailWidth:380,
+					thumbnailHeight:246,
+					thumbnailBorderSize:10,
+					thumbnailMinimumAlpha:.3,
+					thumbnailBackgroundColor:"#666666",
+					thumbnailBorderColor1:"#FFFFFF",
+					thumbnailBorderColor2:"#DDDDDD",
+					transparentImages:"no",
+					maxNumberOfThumbnailsOnMobile:13,
+					showTextUnderThumbnail:"no",
+					showThumbnailsGradient:"yes",
+					showThumbnailsHtmlContent:"no",
+					textBackgroundColor:"#333333",
+					textBackgroundOpacity:.7,
+					showText:"yes",
+					showTextBackgroundImage:"yes",
+					showFullTextWithoutHover:"no",
+					showThumbnailBoxShadow:"yes",
+					thumbnailBoxShadowCss:"0px 2px 2px #555555",
+					showReflection:"yes",
+					reflectionHeight:60,
+					reflectionDistance:0,
+					reflectionOpacity:.2,
+												
+					//scrollbar settings
+					showScrollbar:"yes",
+					disableScrollbarOnMobile:"yes",
+					enableMouseWheelScroll:"yes",
+					scrollbarHandlerWidth:300,
+					scrollbarTextColorNormal:"#777777",
+					scrollbarTextColorSelected:"#000000",
+					
+					//bullets navigation settings
+					showBulletsNavigation:"no",
+					bulletsBackgroundNormalColor1:"#fcfdfd",
+					bulletsBackgroundNormalColor2:"#e4e4e4",
+					bulletsBackgroundSelectedColor1:"#000000",
+					bulletsBackgroundSelectedColor2:"#666666",
+					bulletsShadow:"0px 0px 4px #888888",
+					bulletsNormalRadius:7,
+					bulletsSelectedRadius:8,
+					spaceBetweenBullets:16,
+					bulletsOffset:14,
+												
+					//combobox settings
+					showComboBox:"no",
+					startAtCategory:1,
+					selectLabel:"SELECT CATEGORIES",
+					allCategoriesLabel:"All Categories",
+					showAllCategories:"no",
+					comboBoxPosition:"topright",
+					selectorBackgroundNormalColor1:"#FFFFFF",
+					selectorBackgroundNormalColor2:"#dddddd",
+					selectorBackgroundSelectedColor1:"#FFFFFF",
+					selectorBackgroundSelectedColor2:"#FFFFFF",
+					selectorTextNormalColor:"#8b8b8b",
+					selectorTextSelectedColor:"#000000",
+					buttonBackgroundNormalColor1:"#FFFFFF",
+					buttonBackgroundNormalColor2:"#dddddd",
+					buttonBackgroundSelectedColor1:"#FFFFFF",
+					buttonBackgroundSelectedColor2:"#FFFFFF",
+					buttonTextNormalColor:"#8b8b8b",
+					buttonTextSelectedColor:"#000000",
+					comboBoxShadowColor:"#999999",
+					comboBoxHorizontalMargins:12,
+					comboBoxVerticalMargins:12,
+					comboBoxCornerRadius:0,
+												
+					//lightbox settings
+					buttonsAlignment:"in",
+					itemBoxShadow:"none",
+					descriptionWindowAnimationType:"opacity",
+					descriptionWindowPosition:"bottom",
+					slideShowAutoPlay:"no",
+					addKeyboardSupport:"yes",
+					showCloseButton:"yes",
+					showShareButton:"yes",
+					showZoomButton:"yes",
+					showLightboxSlideShowButton:"yes",
+					showSlideShowAnimation:"yes",
+					showNextAndPrevButtons:"yes",
+					showNextAndPrevButtonsOnMobile:"yes",
+					showDescriptionButton:"yes",
+					showDescriptionByDefault:"no",
+					videoShowFullScreenButton:"yes",
+					videoAutoPlay:"no",
+					nextVideoOrAudioAutoPlay:"yes",
+					videoLoop:"no",
+					audioAutoPlay:"no",
+					audioLoop:"no",
+					backgroundOpacity:.9,
+					descriptionWindowBackgroundOpacity:.95,
+					buttonsHideDelay:3,
+					slideShowDelay:4,
+					defaultItemWidth:640,
+					defaultItemHeight:480,
+					itemOffsetHeight:50,
+					spaceBetweenButtons:1,
+					buttonsOffsetIn:2,
+					buttonsOffsetOut:5,
+					itemBorderSize:5,
+					itemBorderRadius:0,
+					itemBackgroundColor:"#333333",
+					itemBorderColor1:"#FFFFFF",
+					itemBorderColor2:"#dddddd",
+					lightBoxBackgroundColor:"#000000",
+					descriptionWindowBackgroundColor:"#FFFFFF",
+					videoPosterBackgroundColor:"#0099FF",
+					videoControllerBackgroundColor:"#FFFFFF",
+					audioControllerBackgroundColor:"#FFFFFF",
+					timeColor:"#000000"
+				});
+				
+				carousel.addListener(FWDUltimate3DCarousel.IS_API_READY, onApiReady);
+				carousel.addListener(FWDUltimate3DCarousel.THUMB_CHANGE, onThumbChange);
+				carousel.addListener(FWDUltimate3DCarousel.CATEGORY_CHANGE, onCategoryChange);
+			})
+			
+			function gotoNextCategory()
+			{
+				carousel.switchCategory(carousel.getCurrentCategoryId() + 1);
+			}
+			
+			function gotoNextThumb()
+			{
+				carousel.gotoThumb(carousel.getCurrentThumbId() + 1);
+			}
+			
+			function gotoPrevThumb()
+			{
+				carousel.gotoThumb(carousel.getCurrentThumbId() - 1);
+			}
+			
+			function startStopSlideshow()
+			{
+				if (carousel.isSlideshowPlaying())
+				{
+					carousel.stopSlideshow();
+				}
+				else
+				{
+					carousel.startSlideshow();
+				}
+			}
+			
+			function onApiReady()
+			{
+				console.log("api ready");
+			}
+			
+			function onThumbChange(ev)
+			{
+				console.log("thumb id: " + ev.id);
+			}
+			
+			function onCategoryChange(ev)
+			{
+				console.log("category id: " + ev.id);
+			}
+		</script>
+	
+</head>
+
+<body>
+
+<header id="header" class="pt-10 pb-10 mb-show">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 col-xs-2">
+				<nav class="navbar navbar-top pl-0 pr-0">
+
+				  <a id="menu-icon" class="menu-toggler btn btn-line-a py-3 py-md-0" href="#">
+					<span class="icon icon-menu icon-menu-a">
+					  <span class="bars">
+						<span class="bar1"></span>
+						<span class="bar2"></span>
+						<span class="bar3"></span>
+					  </span>
+					</span>
+				  </a>
+				</nav>
+				<!-- End of navbar-top -->
+
+				<!-- Begin of navfull-menu -->
+				<nav id="navfull-menu" class="navfull navfull-menu navigation menu-behavior">
+				  <div class="navbar-group group-bg">
+					<img src="images/mb-logo.png">
+					<ul class="navbar-nav nav-menu menu-close font-title fw-bold">
+						<li class="nav-item"><a href="enter.html" class="activemenu">Lobby</a></li>
+						<li class="nav-item"><a href="exhibition.html">Exhibitions</a></li>
+						<li class="nav-item"><a href="exhibition.html">Exhibition 1</a></li>
+						<li class="nav-item"><a href="exhibition2.html">Exhibition 2</a></li>
+						<li class="nav-item"><a href="exhibition3.html">Exhibition 3</a></li>
+						<li class="nav-item"><a href="exhibition4.html">Exhibition 4</a></li>
+						<li class="nav-item"><a href="halls.html">Halls</a></li>
+						<li class="nav-item"><a href="agenda.html">Agenda</a></li>
+						<li class="nav-item"><a href="sponsors.html">Sponsors</a></li>
+						<li class="nav-item"><a href="quiz.html">Quiz</a></li>
+						<li class="nav-item"><a href="wall.html">Wall</a></li>
+						<li class="nav-item"><a href="videos.html">VOD</a></li>
+						<li class="nav-item"><a href="eposters.html">Eposter</a></li>
+						<li class="nav-item"><a class="live-classic-btn" href="javascript:void(0);">Live Chat</a></li>
+						<li class="mt-15"><a class="live-btn" href="javascript:void(0);">Live Chat</a></li>
+					</ul>
+				  </div>
+				</nav>
+			</div>
+			<div class="col-sm-5 col-xs-4 p-0">
+				<img class="main-logo" src="images/white-logo.png">
+			</div>
+			<div class="col-sm-5 col-xs-6 text-right user-ent-cont pl-0">
+				<div class="row">
+				
+					<div class="col-md-12">
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-bell-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<!-- item--><a href="#" class="dropdown-item py-3"><small class="float-right text-muted pl-2">2 min ago</small><div class="media"><div class="media-body align-self-center ml-2 text-truncate"><h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6><small class="text-muted mb-0">Dummy text of the printing and industry.</small></div><!--end media-body--></div><!--end media--> </a>
+										<!--end-item-->
+										<!-- item--><a href="#" class="dropdown-item py-3"><small class="float-right text-muted pl-2">10 min ago</small><div class="media"><div class="media-body align-self-center ml-2 text-truncate"><h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6><small class="text-muted mb-0">It is a long established fact that a reader.</small></div><!--end media-body--></div><!--end media--> </a>
+										<!--end-item-->
+									</div>
+									<!-- All--><a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a></div>
+							</li>
+						</ul>
+						
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-envelope-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<!-- item--><a href="#" class="dropdown-item py-3"><small class="float-right text-muted pl-2">2 min ago</small><div class="media"><div class="media-body align-self-center ml-2 text-truncate"><h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6><small class="text-muted mb-0">Dummy text of the printing and industry.</small></div><!--end media-body--></div><!--end media--> </a>
+										<!--end-item-->
+										<!-- item--><a href="#" class="dropdown-item py-3"><small class="float-right text-muted pl-2">10 min ago</small><div class="media"><div class="media-body align-self-center ml-2 text-truncate"><h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6><small class="text-muted mb-0">It is a long established fact that a reader.</small></div><!--end media-body--></div><!--end media--> </a>
+										<!--end-item-->
+									</div>
+									<!-- All--><a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a></div>
+							</li>
+						</ul>
+						
+						<ul>
+							<li class="dropdown">
+							  <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							  <img src="images/sales2.jpg" alt="profile-user" class="rounded-circle">
+							  <img class="up-icon" src="images/up-icon.gif" />
+							  </a>
+							  <div class="dropdown-menu dropdown-menu-right">
+								 <div class="profile-details pl-30 pr-30">
+									<div class="row">
+										<div class="col-md-4 col-xs-4 p-0">
+											<img src="images/sales2-new.jpg" alt="" class="rounded-circle">
+										</div>
+										<div class="col-md-8 col-xs-8 pr-0">
+											<h3 class="mb-10 mt-40">Shlomi ASHKENAZI</h3>
+											<a href="my-profile.html">View Profile</a>
+										</div>
+									</div>
+								 </div>
+								 <a class="dropdown-item" href="#">Edit</a> 
+								 <a class="dropdown-item" href="#">Password</a>
+								 <a class="dropdown-item" href="#">Change Profile Picture</a>
+								 <a class="dropdown-item" href="#">Cover Photo</a>
+								 <a class="dropdown-item" href="#">E-mail Notifications</a>
+								 <a class="dropdown-item" href="#">Download</a>
+								 <a class="dropdown-item" href="#">Delete</a>
+								 <div class="dropdown-divider mb-0"></div>
+								 <a class="dropdown-item logout" href="#">Logout</a>
+							  </div>
+						   </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<header id="in-header" class="mb-hide">
+	<div class="container">
+        <div class="row">
+            <div class="col-md-2 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+			<div class="col-md-8">
+                <ul id="header-menu">
+                    <li class="active"><a href="enter.html">Lobby</a></li>
+                    <li><a href="exhibition.html">Exhibitions</a>
+						<ul>
+							<li><a href="exhibition.html">Exhibition 1</a></li>
+							<li><a href="exhibition2.html">Exhibition 2</a></li>
+							<li><a href="exhibition3.html">Exhibition 3</a></li>
+							<li><a href="exhibition4.html">Exhibition 4</a></li>
+						</ul>
+					</li>
+                    <li><a href="halls.html">Halls</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="quiz.html">Quiz</a></li><li><a href="wall.html">Wall</a></li><li><a href="videos.html">VOD</a></li>
+                    <li><a href="eposters.html">Eposter</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-right user-ent-cont">
+				<div class="row">
+				
+					<div class="col-md-12">
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-bell-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<!-- item--><a href="#" class="dropdown-item py-3"><small class="float-right text-muted pl-2">2 min ago</small><div class="media"><div class="media-body align-self-center ml-2 text-truncate"><h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6><small class="text-muted mb-0">Dummy text of the printing and industry.</small></div><!--end media-body--></div><!--end media--> </a>
+										<!--end-item-->
+										<!-- item--><a href="#" class="dropdown-item py-3"><small class="float-right text-muted pl-2">10 min ago</small><div class="media"><div class="media-body align-self-center ml-2 text-truncate"><h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6><small class="text-muted mb-0">It is a long established fact that a reader.</small></div><!--end media-body--></div><!--end media--> </a>
+										<!--end-item-->
+									</div>
+									<!-- All--><a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a></div>
+							</li>
+						</ul>
+						
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-envelope-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<!-- item--><a href="#" class="dropdown-item py-3"><small class="float-right text-muted pl-2">2 min ago</small><div class="media"><div class="media-body align-self-center ml-2 text-truncate"><h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6><small class="text-muted mb-0">Dummy text of the printing and industry.</small></div><!--end media-body--></div><!--end media--> </a>
+										<!--end-item-->
+										<!-- item--><a href="#" class="dropdown-item py-3"><small class="float-right text-muted pl-2">10 min ago</small><div class="media"><div class="media-body align-self-center ml-2 text-truncate"><h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6><small class="text-muted mb-0">It is a long established fact that a reader.</small></div><!--end media-body--></div><!--end media--> </a>
+										<!--end-item-->
+									</div>
+									<!-- All--><a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a></div>
+							</li>
+						</ul>
+						
+						<ul>
+							<li class="dropdown">
+							  <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							  <img src="images/sales2.jpg" alt="profile-user" class="rounded-circle">
+							  <img class="up-icon" src="images/up-icon.gif" />
+							  </a>
+							  <div class="dropdown-menu dropdown-menu-right">
+								 <div class="profile-details pl-30 pr-30">
+									<div class="row">
+										<div class="col-md-4 col-xs-4 p-0">
+											<img src="images/sales2-new.jpg" alt="" class="rounded-circle">
+										</div>
+										<div class="col-md-8 col-xs-8 pr-0">
+											<h3 class="mb-10 mt-40">Shlomi ASHKENAZI</h3>
+											<a href="my-profile.html">View Profile</a>
+										</div>
+									</div>
+								 </div>
+								 <a class="dropdown-item" href="#">Edit</a> 
+								 <a class="dropdown-item" href="#">Password</a>
+								 <a class="dropdown-item" href="#">Change Profile Picture</a>
+								 <a class="dropdown-item" href="#">Cover Photo</a>
+								 <a class="dropdown-item" href="#">E-mail Notifications</a>
+								 <a class="dropdown-item" href="#">Download</a>
+								 <a class="dropdown-item" href="#">Delete</a>
+								 <div class="dropdown-divider mb-0"></div>
+								 <a class="dropdown-item logout" href="#">Logout</a>
+							  </div>
+						   </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+</header>
+
+
+<section id="inner-headers" class="pt-0 pb-10 mb-show full-size">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 col-xs-2"><a href="javascript:history.back();"><img src="images/mb-lobi-icon-white.png" /></a></div>
+			<div class="col-sm-10 col-xs-10 pl-0"><h3>E-Poster</h3></div>
+		</div>
+	</div>
+</section>
+<section id="footer-text" class="mb-show">
+  <div id="news">Welcome to the Vırtual Summıt orgınazed by eventmagıx</div>
+</section>
+<style>
+	#enter-page{overflow:hidden;}
+	#enter-page .full-size{
+		position:relative;z-index:99;
+	}
+</style>
+<section id="enter-page" class="pt-70 pt-xs-150 pb-30">
+	<div class=" full-size">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+				<div id="myDiv"></div>
+				<!-- carousel data -->
+				<div id="carouselData" style="display: none;">
+					
+					<!-- category  -->
+					<div data-cat="Category one">
+						<ul>
+							<li data-url="load/media/flash/fwd.swf" data-width="800" data-height="500"></li>
+							<li data-thumbnail-path="load/media/thumbnails/flash.jpg"></li>
+							<li data-thumbnail-text="" data-thumbnail-text-title-offset="43" data-thumbnail-text-offset-top="16" data-thumbnail-text-offset-bottom="7">
+								<p class="largeLabel">CUSTOM TEXT CAN BE ADDED HERE</p>
+								<p class="smallLabel">Full css support, the text which appears here.</p>
+							</li>
+							<li data-info="">
+								<p class="mediaDescriptionHeader">CUSTOM TEXT CAN BE ADDED HERE AND FORMATTED WITH CSS</p>
+								<p class="mediaDescriptionText">Full css support, the text which appear over the thumbnail can be formatted  with CSS.</p>
+							</li>
+						</ul>
+					
+						<ul>
+							<li data-url="https://www.google.com/maps/embed/v1/place?q=castelul%20hunedoara&key=..." data-width="1100" data-height="650"></li>
+							<li data-thumbnail-path="load/media/thumbnails/maps.jpg"></li>
+							<li data-thumbnail-text="" data-thumbnail-text-title-offset="43" data-thumbnail-text-offset-top="16" data-thumbnail-text-offset-bottom="7">					
+								<p class="largeLabel">THUMBNAILS DESCRIPTION</p>
+								<p class="smallLabel">Each thumbnail can have optional short description and an optional detailed description in the lightbx item.</p>
+							</li>
+						</ul>
+						
+						<ul>
+							<li data-url="http://www.webdesign-flash.ro/iframe.html" data-width="900" data-height="650"></li>
+							<li data-thumbnail-path="load/media/thumbnails/iframe.jpg"></li>
+							<li data-thumbnail-text="" data-thumbnail-text-title-offset="43" data-thumbnail-text-offset-top="16" data-thumbnail-text-offset-bottom="7">
+								<p class="largeLabel">FULL MULDIMEDIA SUPPORT</p>
+								<p class="smallLabel">Awesome full multimedia support ( mp4, mp3, .swf, jpg, jpeg, png, youtube, vimeo ).</p>
+							</li>
+							<li data-info="">
+								<p class="mediaDescriptionHeader">FULL MULDIMEDIA SUPPORT</p>
+								<p class="mediaDescriptionText">Awesome full multimedia support <span class=italic">mp4</span>, mp3, .swf, jpg, jpeg, png, youtube, vimeo ).</p>
+							</li>
+						</ul>
+						
+						<ul>
+							<li data-url="link:http://www.google.com" data-target="_blank"></li>
+							<li data-thumbnail-path="load/media/thumbnails/link.jpg"></li>
+								<li data-thumbnail-text="" data-thumbnail-text-title-offset="43" data-thumbnail-text-offset-top="16" data-thumbnail-text-offset-bottom="7">
+								<p class="largeLabel">CUSTOM CLICK THUMBNAIL ACTION</p>
+								<p class="smallLabel">When a thumbnail is clicked it can open a browser window, the lightbox or no action.</p>
+							</li>
+						</ul>
+
+						<ul>
+							<li data-url="load/media/images/1.jpg"></li>
+							<li data-thumbnail-path="load/media/thumbnails/image.jpg"></li>
+							<li data-thumbnail-text="" data-thumbnail-text-title-offset="43" data-thumbnail-text-offset-top="16" data-thumbnail-text-offset-bottom="7">
+								<p class="largeLabel">RESPONSIVE LAYOUT</p>
+								<p class="smallLabel">Ultimate 3D Carousel has responsive layout.</p>
+							</li>
+							<li data-info="">
+								<p class="mediaDescriptionHeader">VIMEO AND YOUTUBE SUPPORT</p>
+								<p class="mediaDescriptionText">All you have to do is to include the link from YouTube or Vimeo video that you want to display and the lightbox will display and play your video. The size (width and height) of each video can be set easily.</p>
+							</li>
+						</ul>
+
+						<ul>
+							<li data-url="https://www.youtube.com/watch?v=9bZkp7q19f0" data-width="1000" data-height="550"></li>
+							<li data-thumbnail-path="load/media/thumbnails/youtube.jpg"></li>
+							<li data-thumbnail-text="" data-thumbnail-text-title-offset="35" data-thumbnail-text-offset-top="10" data-thumbnail-text-offset-bottom="7">
+								<p class="largeLabel">VIMEO, YOUTUBE, HTML5 VIDEO!</p>
+								<p class="smallLabel">Revolution lightbox can load and play videos from Youtube, Vimeo or HTML5.</p>
+							</li>
+							<li data-info="">
+								<p class="mediaDescriptionHeader">VIMEO, YOUTUBE, HTML5 VIDEO!</p>
+								<p class="mediaDescriptionText">All you have to do is to include the link from YouTube, Vimeo or mp4 video that you want to display and the lightbox will display and play your video. The size (width and height) of each video can be set easily.</p>
+							</li>
+						</ul>
+						
+						<ul>
+							<li data-url="http://vimeo.com/50747914" data-width="900" data-height="550"></li>
+							<li data-thumbnail-path="load/media/thumbnails/vimeo.jpg"></li>
+							<li data-thumbnail-text="" data-thumbnail-text-title-offset="43" data-thumbnail-text-offset-top="16" data-thumbnail-text-offset-bottom="7">
+								<p class="largeLabel">CUSTOMIZABLE SKIN AND COLOR</p>
+								<p class="smallLabel">The entire color theme can be modified.</p>
+							</li>
+							<li data-info="">
+								<p class="mediaDescriptionHeader">CUSTOMIZABLE SKIN AND COLOR</p>
+								<p class="mediaDescriptionText">The entire color theme can be modified, and also the skin can be replaced with your own.</p>
+							</li>
+						</ul>
+						
+						<ul>
+							<li data-url="load/media/audio/audio.mp3"></li>
+							<li data-thumbnail-path="load/media/thumbnails/audio.jpg"></li>
+							<li data-thumbnail-text="" data-thumbnail-text-title-offset="43" data-thumbnail-text-offset-top="16" data-thumbnail-text-offset-bottom="7">
+								<p class="largeLabel">OUTSTANDING PERFORMANCE</p>
+								<p class="smallLabel">High performance using OOP and the latest CSS techniques.</p>
+							</li>
+							<li data-info="">
+								<p class="mediaDescriptionHeader">OUTSTANDING PERFORMANCE</p>
+								<p class="mediaDescriptionText">High performance using OOP code and the latest CSS techniques, ready for mobile with swipe and pinch support, very flexible, easy to setup and extremely customizable.</p>
+							</li>
+						</ul>
+						
+						<ul>
+							<li data-url="load/media/videos/video-desktop.mp4,load/media/videos/video-mobile.mp4" data-poster-path="load/media/posters/video-desktop.jpg" data-width="900" data-height="506"></li>
+							<li data-thumbnail-path="load/media/thumbnails/video.jpg"></li>
+							<li data-thumbnail-text="" data-thumbnail-text-title-offset="43" data-thumbnail-text-offset-top="16" data-thumbnail-text-offset-bottom="7">
+								<p class="largeLabel">REVOLUTION LIGHTBOX INCLUDED</p>
+								<p class="smallLabel">Full blown multimedia responsive lightbox included.</p>
+							</li>
+							<li data-info>
+								<p class="mediaDescriptionHeader">REVOLUTION LIGHTBOX INCLUDED</p>
+								<p class="mediaDescriptionText">Full blown multimedia responsive lightbox included, it runs on all major browsers and mobile devices like iPhone, iPad, iOS, Android and Windows desktop or mobile. It has support for image (jpg, jpeg, png, video (mp4), audio (mp3), Vimeo, YouTube, iFrame, Google maps and flash.</p>
+							</li>
+						</ul>
+						
+					</div>
+					<!-- end  -->
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!-- Question Modal -->
+<div id="myQuestion" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <iframe width="100%" height="750" style="border: none;" src="https://ask.ver.us/"></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/mb-menu.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script src="js/eocjs-newsticker.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+	
+	$("#news").eocjsNewsticker({
+		speed: 25,
+		timeout: 0.5
+	  });
+	
+});
+</script>
+<script>
+
+$(document).ready(function(e) {
+
+  $(".live-btn2, .live-btn, .live-classic-btn").click(function(){
+	$(".bs-chatbot-fab__nJAOV").click();
+  });
+    
+});
+
+</script>
+<script>var Chatbot={appId:"sc180abb8-c49d-4f01-999c-fc242164f787",mode:"livechat"};!function(t,a){var e=function(){(e.q=e.q||[]).push(arguments)};e.q=e.q||[],t.ChatbotApi=e;!function(){var t=a.createElement("script");t.type="text/javascript",t.async=1,t.src="https://widget.installchatbot.com/static/js/widget.js";var e=a.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();}(window,document)</script>
+
+</body>
+
+</html>

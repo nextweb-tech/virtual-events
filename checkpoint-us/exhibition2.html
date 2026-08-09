@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/jquery.mapify.css">
+
+    <style type="text/css">
+    
+    /* Mapify custom popOver example */
+    
+    .mapify-popOver strong{
+        font-weight: 400;
+        font-size:24px;
+        line-height: 1em;
+        display: block;
+        margin-bottom: 10px;
+        color: #000;
+    }
+    .mapify-popOver{
+        color: #999;
+        font-size: 16px;
+        height: 130px;
+    }
+    .mapify-popOver-content{
+        position: relative;
+        top:50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+    }
+    
+    .mapify-popOver.customPopOver{
+        background: #09f;
+    }
+    
+    /* Custom hovering style */
+    .mapify-hover{
+        fill:rgba(0,0,0,0.15);
+        stroke: #fff;
+        stroke-width: 2;
+    }
+    
+    .customHover{
+        fill:#09f;
+        stroke: #fff;
+        stroke-width: 2;
+    }
+    
+</style>
+
+</head>
+
+<body>
+
+<header id="in-header">
+	<div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="header-menu">
+                    <li><a href="enter.html">Lobby</a></li>
+                    <li><a href="exhibition.html">Exhibition</a></li><li class="active"><a href="exhibition2.html">Check Point</a></li>
+                    <li><a href="halls.html">Hall A</a></li>
+                    <li><a href="halls-b.html">Hall B</a></li>
+                    <li><a href="halls-c.html">Hall C</a></li>
+                    <li><a href="halls-d.html">Hall D</a></li><li><a href="wall.html">Wall</a></li>
+                    <li><a href="videos.html">VOD</a></li><li><a href="agenda.html">Agenda</a></li></li><li><a href="speakers.html">Speakers</a></li>
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="col-md-3 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="exhibition-select-cont" class="pt-80">
+    <div class="container">
+        <div class="exhibition-select">
+            <div class="accordion-container">
+              
+              <div class="set">
+                <a href="#">
+                  Company List 
+                  <i class="fa fa-plus"></i>
+                </a>
+                <div class="content">
+                  <ul>
+                    <li><a class="active" href="">Check Point</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="exhibition-search">
+                <div class="row">
+                  <div class="col-md-8 pr-0">
+                    <input type="text" name="Email" class="search-text" id="" aria-required="true" placeholder="Search Company Name">
+                  </div>
+                  <div class="col-md-4 p-0">
+                    <input type="submit" name="action_doLogin" value="Search" class="search-btn-main" id="">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="enter-page-in" style="background: none !important; padding-top:43px;">
+
+    <img style="display:none;" width="578px" height="716px" border="0" usemap="#Map" />
+
+    	<img src="images/exhibition-bg.jpg" width="1920" height="946" usemap="#Map2" border="0" />
+<map name="Map2" id="Map2">
+<area data-nbmembre="1" alt="Check Point" title="Check Point" shape="poly" coords="270,864,472,822,495,670,468,676,450,646,374,658,371,672,268,671,268,743,295,783,270,864" href="stand.html" />
+  <area data-nbmembre="2" alt="eventmagix" title="eventmagix" shape="poly" coords="603,793" href="#" />
+  <area data-nbmembre="3" alt="eventmagix" title="eventmagix" shape="poly" coords="606,738,604,794,782,756,767,618,756,622,754,612,718,617,664,616,659,601,608,609,610,618,570,618,570,692,605,738" href="stand2.html" />
+  <area data-nbmembre="4" alt="eventmagix" title="eventmagix" shape="poly" coords="882,661" href="stand2.html" />
+  <area data-nbmembre="5" alt="eventmagix" title="eventmagix" shape="poly" coords="883,660,899,730,1083,689,1036,572,1035,550,856,552,856,622,883,660" href="stand2.html" />
+  <area data-nbmembre="6" alt="eventmagix" title="eventmagix" shape="poly" coords="1152,602,1188,667,1340,634,1294,564,1305,564,1304,489,1124,490,1123,564,1152,606" href="stand2.html" />
+  <area data-nbmembre="7" alt="eventmagix" title="eventmagix" shape="poly" coords="1372,505,1350,509,1435,614,1564,586,1550,571,1570,536,1564,527,1552,521,1552,454,1371,458,1371,504" href="stand2.html" />
+  <area data-nbmembre="8" alt="eventmagix" title="eventmagix" shape="poly" coords="357,573,346,617,506,588,524,487,506,488,506,457,326,458,326,533,357,575" href="stand2.html" />
+  <area data-nbmembre="9" alt="eventmagix" title="eventmagix" shape="poly" coords="612,540,611,569,759,544,754,492,758,492,756,418,576,417,577,491,612,540" href="stand2.html" />
+  <area data-nbmembre="10" alt="eventmagix" title="eventmagix" shape="poly" coords="811,452,850,503,852,526,1006,500,991,454,989,379,811,379,811,453" href="stand2.html" />
+  <area data-nbmembre="11" alt="eventmagix" title="eventmagix" shape="poly" coords="1071,437,1095,485,1224,462,1202,429,1204,420,1192,407,1227,407,1228,333,1047,333,1048,406,1070,437" href="stand2.html" />
+  <area data-nbmembre="12" alt="eventmagix" title="eventmagix" shape="poly" coords="1251,372,1244,371,1303,448,1417,428,1388,396,1398,372,1431,372,1431,298,1251,296,1252,372" href="stand2.html" />
+  <area data-nbmembre="13" alt="eventmagix" title="eventmagix" shape="poly" coords="406,408,395,448,531,429,540,357,527,358,524,353,544,350,545,278,363,278,364,352,406,408" href="stand2.html" />
+  <area data-nbmembre="14" alt="eventmagix" title="eventmagix" shape="poly" coords="584,341,618,386,618,414,740,397,735,342,763,342,762,267,583,268,583,342" href="stand2.html" />
+  <area data-nbmembre="15" alt="eventmagix" title="eventmagix" shape="poly" coords="780,317,818,368,820,376,883,377,953,366,934,318,959,316,960,244,779,244,779,318" href="stand2.html" />
+  <area data-nbmembre="16" alt="eventmagix" title="eventmagix" shape="poly" coords="984,287,1013,325,1029,353,1138,330,1118,306,1122,289,1165,286,1164,214,986,214,982,289" href="stand2.html" />
+  <area data-nbmembre="17" alt="eventmagix" title="eventmagix" shape="poly" coords="1188,270,1170,272,1212,330,1308,312,1282,280,1286,267,1366,268,1364,192,1185,194,1186,270" href="stand2.html" />
+</map>
+
+</section>
+
+<!-- Company Modal -->
+<div id="myModal" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="row bg-grey pl-30 pr-30">
+            <div class="col-md-3">
+                <img class="sponsor-big-logo" src="images/sponsor-logo-big.gif">
+            </div>
+            <div class="col-md-9">
+                <h3 class="mt-40">eventmagix</h3>
+                <h4 class="m-0"><a href="" target="_blank">www.companyname.com</a></h4>
+            </div>
+        </div>
+
+        <div class="row pl-30 pr-30 pt-50">
+            <div class="col-md-12">
+                <p><img src="images/company-img.jpg" /></p>
+                <h5>About</h5>
+                <p>Donec pulvinar augue libero. Cras pretium, augue et fringilla venenatis, ex tellus fringilla erat, sed volutpat sem eros at quam. Aenean quis tincidunt mauris, non imperdiet arcu. Nullam eu mi ligula. Aliquam auctor eget orci eget vulputate. Nulla a nisi in nisl eleifend luctus et ac ante. Mauris sit amet nisi commodo, fringilla ipsum eget, laoreet odio.</p>
+                <p>Morbi dapibus diam nec lectus condimentum, et ullamcorper ante egestas. Ut augue risus, euismod at sem ut, accumsan posuere augue. Duis sed nisl nulla. Sed dictum nisi eros, a bibendum orci feugiat et. Mauris malesuada, urna ut pulvinar malesuada, erat sapien dignissim erat, nec accumsan magna urna at nulla.</p>
+                <p class="text-right"><a href="stand.html" class="btn-view">View Stand</a></p>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="share-cont">
+            <ul>
+              <li><a href=""><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+              <li><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a></li>
+              <li><a href=""><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a></li>
+            </ul>
+           </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Company Modal -->
+<div id="myModal2" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="row bg-grey pl-30 pr-30">
+            <div class="col-md-3">
+                <img class="sponsor-big-logo" src="images/simul-logo.gif">
+            </div>
+            <div class="col-md-9">
+                <h3 class="mt-40">Simul Interactive</h3>
+                <h4 class="m-0"><a href="https://www.simulinteractive.com" target="_blank">www.simulinteractive.com</a></h4>
+            </div>
+        </div>
+
+        <div class="row pl-30 pr-30 pt-50">
+            <div class="col-md-12">
+                <p><img src="images/company2-img.jpg" /></p>
+                <h5>About</h5>
+				<p>Simul Interactive Partnership has evolved by two market leaders -Simul LTD and Verus Internet solution.</p>
+				<p>We saw the demand raised from the industry for an integrated high-end solution that enhance networking and interactive solutions before and during events .</p>
+				<p>Simul Interactive creates and implements imaginative,tailored solutions for events that enhance user experiences and networking before and during meetings.</p>
+				<p>Our solutions are developed by deep understanding and years of experience at events operations.</p>
+				<p>Our rigorous consultation process assesses the needs of your event, empowered by our innovative toolbox including interactive technologies, digital, mobile and web platforms.</p>
+				<p>We deliver Software-Hardware -Network by our professional team all under one umbrella.</p>
+				<p>From now on you do not need to approach various vendors for Innovative high-end solutions to improve your user experience and interaction during your event.</p>
+				<p>Simul Interactive team will be at your side from planning to delivery all in one solution at your service of your organization and your client’s event.</p>
+				<p>With a proven track of successful events within our portfolio we are here to serve you and your needs with a special care and professionalism.</p>
+
+                <p class="text-right"><a href="stand2.html" class="btn-view">View Stand</a></p>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="share-cont">
+            <ul>
+              <li><a href=""><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+              <li><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a></li>
+              <li><a href=""><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a></li>
+            </ul>
+           </div>
+
+    </div>
+
+  </div>
+</div>
+
+<style type="text/css">
+.accordion-container{
+  position: relative;
+  max-width: 500px;
+  height: auto;
+  margin: 10px auto;
+}
+.accordion-container > h2{
+  text-align: center;
+  color: #fff;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.set{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.set > a{
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+  background-color: #fcee20;
+}
+.set > a i{
+  float: right;
+  margin-top: 2px;
+}
+.set > a.active{
+  background-color:#fcee20;
+  color: #000;
+}
+.content{
+  background:rgba(5,130,212, .8);
+  display:none;
+  padding:15px;
+}
+.content ul li a.active{color:#fcee20 !important; font-weight: 500; text-decoration: underline;;}
+.content ul li a{color:#fff; line-height: 28px;}
+.content ul li a:hover{color:#fcee20; text-decoration: underline;}
+.content p{
+  padding: 10px 15px;
+  margin: 0;
+  color: #fff;
+}
+</style>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.mapify.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+    
+    $("img[usemap]:first").mapify({
+        hoverClass: "drop-hover"
+    });
+    
+    $("img[usemap]:last").mapify({
+        popOver: {
+            content: function(zone){
+                return "<strong>"+zone.attr("data-title")+"</strong>"+zone.attr("data-nbmembre")+" Members";
+            },
+            delay: 0.7,
+            margin: "15px",
+            height: "130px",
+            width: "260px"
+        },
+        onAreaHighlight: function(){
+            console.log("onAreaHighlight callback");
+        },
+        onMapClear: function(){
+            console.log("onMapClear callback");
+        }
+    });
+    
+    $("#dynamicClassChange").click(function() {
+        $(this).attr("data-hover-class","hover-green");
+    });
+    
+});
+
+
+$(document).ready(function() {
+  $(".set > a").on("click", function() {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(this)
+        .siblings(".content")
+        .slideUp(200);
+      $(".set > a i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+    } else {
+      $(".set > a i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+      $(this)
+        .find("i")
+        .removeClass("fa-plus")
+        .addClass("fa-minus");
+      $(".set > a").removeClass("active");
+      $(this).addClass("active");
+      $(".content").slideUp(200);
+      $(this)
+        .siblings(".content")
+        .slideDown(200);
+    }
+  });
+});
+
+</script>
+</body>
+
+</html>

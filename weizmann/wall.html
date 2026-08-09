@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+
+</head>
+
+<body>
+
+<header id="in-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="header-menu">
+                    <li><a href="enter.html">Lobby</a></li>
+                   
+                    <li><a href="halls.html">Hall A</a></li>
+                    <li><a href="halls-b.html">Hall B</a></li>
+                    <li><a href="halls-c.html">Hall C</a></li>
+                    <li><a href="halls-d.html">Hall D</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    
+                    
+					
+					<li class="active"><a href="wall.html">Wall</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="col-md-3 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="enter-page">
+	
+	<div class=" home-program-v2 pt-100">
+	   <div class="container">
+			<iframe allowfullscreen id="wallsio-iframe" src="https://walls.io/euromic?token=007524978bbac4d20856e642624f03da479d9a5b&amp;nobackground=1&amp;show_header=0" style="border:0;height:600px;width:100%" title="ג&#x27;וס פלאס"></iframe>
+			
+	   </div>
+	</div>
+
+</section>
+
+<link rel="stylesheet" type="text/css" href="css/programv2/programv2.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+</script>
+
+</body>
+
+</html>

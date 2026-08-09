@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+
+</head>
+
+<body>
+
+<header id="in-header">
+	<div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="header-menu">
+                    <li><a href="index.html">Lobby</a></li>
+
+                    <li><a href="ussishkin.html">Ussishkin</a></li>
+                    <li class="active"><a href="teddy.html">Teddy</a></li>
+
+                    <li><a href="orens.html">Orens</a></li>
+
+
+                    <li><a href="exhibition-demo.html">Exhibitions</a></li>
+                    <li><a href="lounge-demo.html"> Lounge – Hadarim Patio </a></li>
+                    <li><a href="wall.html">Wall</a></li>
+                    <li><a href="videos.html">VOD</a></li>
+                    <li><a href="eposter.html">E-Poster</a></li>
+                    <li><a href="plan.html">3D Floor Plans</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 text-right">
+                <h3>ICC  Jerusalem – Virtual Congress Center</h3>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="halls-page-in" style="background-image: url(images/teddy-hall.jpg);">
+	<div class="halls-page-cont">
+        <div class="halls-page-inner">
+
+            <div class="contall" style="width:360px;">
+                
+                <div class="box3 allboxs" style="width:340px;">
+                    <iframe style="margin-top:27px;" width="100%" height="150" src="https://www.youtube.com/embed/ze63-n90GYU?playlist=ze63-n90GYU&autoplay=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="question-cont">
+                    <a href="javascript:void(0);" data-toggle="modal" data-target="#myQuestion" class="fullscreen-btn">Ask Your Question</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Question Modal -->
+<div id="myQuestion" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <iframe width="100%" height="750" style="border: none;" src="https://ask.ver.us/"></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+</script>
+</body>
+
+</html>

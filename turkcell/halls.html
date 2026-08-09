@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+
+</head>
+
+<body style="overflow:hidden;">
+
+<header id="in-header">
+	<div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="header-menu">
+                    <li><a href="enter.html">Lobby</a></li>
+                    <li><a href="exhibition.html">Exhibition</a></li>
+                    <li class="active"><a href="halls.html">Hall A</a></li>
+                    <li><a href="halls-b.html">Hall B</a></li>
+                    <li><a href="halls-c.html">Hall C</a></li>
+                    <li><a href="halls-d.html">Hall D</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    
+                    <li><a href="eposter.html">Documents</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="video-container noselect">
+  <div class="btn-play" style="display:none;"><i class="material-icons">play_circle_outline</i></div>
+<video width="100%" height="100%" autoplay muted controls>
+  <source src="turkcell-intro.mp4"  type="video/mp4; codecs=avc1.42E01E,mp4a.40.2">
+</video>
+</div>
+
+<section id="halls-page-in">
+	<div class="halls-page-cont">
+        <div class="halls-page-inner">
+
+            <div class="contall">
+                <div class="box3 allboxs">
+                    <iframe width="100%" height="328" src="https://player.vimeo.com/video/433436544?title=0&byline=0&portrait=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="question-cont">
+                    <a href="javascript:void(0);" data-toggle="modal" data-target="#myQuestion" class="fullscreen-btn">Ask Your Question</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Question Modal -->
+<div id="myQuestion" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <iframe width="100%" height="750" style="border: none;" src="https://ask.ver.us/"></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+
+$(document).ready(function(){
+
+
+
+$('.btn-play').on('click', function() {
+  $('video').get(0).play();
+});
+$('video').on('click', function() {
+  $(this).get(0).pause();
+  $('.btn-play').show();
+});
+$('video').on('playing', function() {
+  if($('video').get(0).paused) {
+     console.log('paused');
+  } else {
+    console.log('playing');
+  }
+  $('.btn-play').hide();
+});
+
+$('video').on('ended',function(){
+
+    $('.video-container').remove();
+
+});
+
+});
+</script>
+</body>
+
+</html>

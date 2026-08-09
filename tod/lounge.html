@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+
+</head>
+
+<body>
+
+<header id="in-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="header-menu">
+                    <li><a href="enter.html">Lobby</a></li>
+                    <li><a href="exhibition.html">Exhibition</a></li>
+                    <li><a href="halls.html">Hall A</a></li>
+                    <li><a href="halls-b.html">Hall B</a></li>
+                    <li><a href="halls-c.html">Hall C</a></li>
+                    <li><a href="halls-d.html">Hall D</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li class="active"><a href="lounge.html">Lounge</a></li>
+                    <li><a href="eposter.html">Eposter</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="enter-page">
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 pt-90">
+				<div id="embedWidget"></div>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<link rel="stylesheet" type="text/css" href="css/programv2/programv2.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+</script>
+
+<script type='text/javascript'>
+	var _options = {
+		'_license_key':'794-509-226',
+		'_role_token':'',
+		'_registration_token':'',
+		'_widget_containerID':'embedWidget',
+		'_widget_width':'100%',
+		'_widget_height':'670px',
+	};
+	(function() {
+		!function(i){
+			i.Widget=function(c){
+				'function'==typeof c&&i.Widget.__cbs.push(c),
+				i.Widget.initialized&&(i.Widget.__cbs.forEach(function(i){i()}),
+				i.Widget.__cbs=[])
+			},
+			i.Widget.__cbs=[]
+		}(window);
+		var ab = document.createElement('script'); 
+		ab.type = 'text/javascript'; 
+		ab.async = true;
+		ab.src = 'https://embed.archiebot.com/em?t='+_options['_license_key']+'&'+Object.keys(_options).reduce(function(a,k){
+				a.push(k+'='+encodeURIComponent(_options[k]));
+				return a
+			},[]).join('&');
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ab, s);
+	})();
+</script>
+
+</body>
+
+</html>

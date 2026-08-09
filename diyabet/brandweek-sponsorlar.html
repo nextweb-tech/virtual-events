@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="css/eocjs-newsticker.css">
+	<link rel="stylesheet" href="css/diyabet.css">
+	<style>
+		#in-header::after {background: rgba(5,130,212, 1)}
+		#header-menu li.active a {color: #fcee20 !important;}
+		#header-menu li.active::after {background: #fcee20;}
+		#header-menu li a {color: #fff;}
+		#enter-page::after {background: rgba(5,130,212, .5);}
+		
+		.schedule-box .tab-buttons .tab-btn.active, .schedule-box .tab-buttons .tab-btn:hover {border-color: #5e6b77;background: #5e6b77;color: #ffffff;}
+		.schedule-box .tab-buttons .tab-btn .curve::after {border-top-color: #5e6b77;}
+		.schedule-box .tab-buttons .tab-btn {background: #ffffff;color: #009fe3;}
+		.schedule-box .hour-box .toggle-btn h3::after {color: #009fe3;}
+		.hour-box.active-box .hour {color: #009fe3 !important;}
+		.schedule-box .hour-box.active-box .circle {border-color: #009fe3;}
+		.schedule-box .hour-box.active-box::before { background: #009fe3;}
+		.toggle-btn.active h3 {color: #009fe3 !important;}
+		.share-cont {background: #273958;color: #fff;}
+		.agenda-dates {background: #17b5e4;color: #fff !important;}
+		.agenda-carousel-date1 {background: #6a9ff7; color: #fff;}
+		.color1 {color: #17b5e4 !important;}
+		.agenda-list a::after {color: #17b5e4;}
+		.agenda-buttons a {border: solid 1px #16b5e6;}
+		.agenda-buttons a.active {color: #fff !important;background: #16b5e6;}
+		.agenda-buttons a {border: solid 1px #16b5e6; color: #16b5e6;}
+	</style>
+	
+</head>
+
+<body>
+
+<header id="header" class="pt-10 pb-10 mb-show">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 col-xs-2">
+				<nav class="navbar navbar-top pl-0 pr-0">
+				  <a id="menu-icon" class="menu-toggler btn btn-line-a py-3 py-md-0" href="#">
+					<span class="icon icon-menu icon-menu-a">
+					  <span class="bars">
+						<span class="bar1"></span>
+						<span class="bar2"></span>
+						<span class="bar3"></span>
+					  </span>
+					</span>
+				  </a>
+				</nav>
+				<!-- End of navbar-top -->
+
+				<!-- Begin of navfull-menu -->
+				<nav id="navfull-menu" class="navfull navfull-menu navigation menu-behavior">
+				  <div class="navbar-group group-bg">
+					<img src="images/mb-logo.png">
+					<ul class="navbar-nav nav-menu menu-close font-title fw-bold">
+						<li class="nav-item"><a href="">Program</a></li>
+						<li class="nav-item"><a href="">Salonlar</a></li>
+						<li class="nav-item"><a href="">Posterler</a></li>
+						<li class="nav-item"><a href="">Stand Alanı</a></li>
+						<li class="nav-item"><a href="">Network Alanı<br />Özel Toplantılar</a></li>
+						<li class="nav-item"><a href="">Uydu Sempozyumları</a></li>
+						<li class="nav-item"><a href="">Sponsorlar</a></li>
+						<li class="nav-item"><a href="">Lobi</a></li>
+						<li class="nav-item"><a class="live-classic-btn" href="javascript:void(0);">Live Chat</a></li>
+						<li class="mt-15"><a class="live-btn" href="javascript:void(0);">Live Chat</a></li>
+					</ul>
+				  </div>
+				</nav>
+			</div>
+			<div class="col-sm-5 col-xs-4 p-0">
+				<img class="main-logo" src="images/white-logo.png">
+			</div>
+			<div class="col-sm-5 col-xs-6 text-right user-ent-cont pl-0">
+				<div class="row">
+				
+					<div class="col-md-12">
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-bell-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+										
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a>
+								</div>
+							</li>
+						</ul>
+						
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+								<i class="fa fa-envelope-o align-self-center topbar-icon" aria-hidden="true"></i> 
+								<span class="badge badge-danger badge-pill noti-icon-badge">2</span>
+							</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a>
+								</div>
+							</li>
+						</ul>
+						
+						<ul>
+							<li class="dropdown">
+							  <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							  <img src="images/sales2.jpg" alt="profile-user" class="rounded-circle">
+							  <img class="up-icon" src="images/up-icon.gif" />
+							  </a>
+							  <div class="dropdown-menu dropdown-menu-right">
+								 <div class="profile-details pl-30 pr-30">
+									<div class="row">
+										<div class="col-md-4 col-xs-4 p-0">
+											<img src="images/sales2-new.jpg" alt="" class="rounded-circle">
+										</div>
+										<div class="col-md-8 col-xs-8 pr-0">
+											<h3 class="mb-10 mt-40">Shlomi ASHKENAZI</h3>
+											<a href="my-profile.html">View Profile</a>
+										</div>
+									</div>
+								 </div>
+								 <a class="dropdown-item" href="#">Edit</a> 
+								 <a class="dropdown-item" href="#">Password</a>
+								 <a class="dropdown-item" href="#">Change Profile Picture</a>
+								 <a class="dropdown-item" href="#">Cover Photo</a>
+								 <a class="dropdown-item" href="#">E-mail Notifications</a>
+								 <a class="dropdown-item" href="#">Download</a>
+								 <a class="dropdown-item" href="#">Delete</a>
+								 <div class="dropdown-divider mb-0"></div>
+								 <a class="dropdown-item logout" href="#">Logout</a>
+							  </div>
+						   </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<header id="in-header" class="mb-hide">
+	<div class="pl-50 pr-50 pl-xs-15 pr-xs-15">
+        <div class="row">
+            <div class="col-md-2 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+			<div class="col-md-8 text-center">
+                <ul id="header-menu">
+                    <li><a href="bilimsel-program.html">Program</a></li>
+                    <li><a href="">Salonlar</a></li>
+                    <li><a href="">Posterler</a></li>
+                    <li><a href="">Stand Alanı</a></li>
+                    <li><a href="">Network Alanı<br />Özel Toplantılar</a></li>
+                    <li><a href="">Uydu Sempozyumları</a></li>
+                    <li><a href="">Sponsorlar</a></li>
+                    <li><a href="index.html">Lobi</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-right user-ent-cont">
+				<div class="row">
+				
+					<div class="col-md-12">
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-bell-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a>
+								</div>
+							</li>
+						</ul>
+						
+						<ul class="list-unstyled topbar-nav mb-0 notifications mr-15 mt-xs-0" style="position:relative; z-index:99;">
+							<li class="dropdown notification-list">
+							<a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+							<i class="fa fa-envelope-o align-self-center topbar-icon" aria-hidden="true"></i> 
+							<span class="badge badge-danger badge-pill noti-icon-badge">2</span></a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+									<h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">Notifications <span class="badge badge-primary badge-pill">2</span></h6>
+									<div class="notification-menu" data-simplebar>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">2 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Your order is placed</h6>
+													<small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item py-3">
+											<small class="float-right text-muted pl-2">10 min ago</small>
+											<div class="media">
+												<div class="media-body align-self-center ml-2 text-truncate">
+													<h6 class="my-0 font-weight-normal text-dark">Meeting with designers</h6>
+													<small class="text-muted mb-0">It is a long established fact that a reader.</small>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a></div>
+							</li>
+						</ul>
+						
+						<ul>
+							<li class="dropdown">
+							  <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							  <img src="images/sales2.jpg" alt="profile-user" class="rounded-circle">
+							  <img class="up-icon" src="images/up-icon.gif" />
+							  </a>
+							  <div class="dropdown-menu dropdown-menu-right">
+								 <div class="profile-details pl-30 pr-30">
+									<div class="row">
+										<div class="col-md-4 col-xs-4 p-0">
+											<img src="images/sales2-new.jpg" alt="" class="rounded-circle">
+										</div>
+										<div class="col-md-8 col-xs-8 pr-0">
+											<h3 class="mb-10 mt-40">Shlomi ASHKENAZI</h3>
+											<a href="my-profile.html">View Profile</a>
+										</div>
+									</div>
+								 </div>
+								 <a class="dropdown-item" href="#">Edit</a> 
+								 <a class="dropdown-item" href="#">Password</a>
+								 <a class="dropdown-item" href="#">Change Profile Picture</a>
+								 <a class="dropdown-item" href="#">Cover Photo</a>
+								 <a class="dropdown-item" href="#">E-mail Notifications</a>
+								 <a class="dropdown-item" href="#">Download</a>
+								 <a class="dropdown-item" href="#">Delete</a>
+								 <div class="dropdown-divider mb-0"></div>
+								 <a class="dropdown-item logout" href="#">Logout</a>
+							  </div>
+						   </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+</header>
+
+<section id="inner-headers" class="pt-0 pb-10 mb-show full-size">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 col-xs-2"><a href="javascript:history.back();"><img src="images/mb-lobi-icon-white.png" /></a></div>
+			<div class="col-sm-10 col-xs-10 pl-0"><h3>Agenda</h3></div>
+		</div>
+	</div>
+</section>
+<section id="footer-text" class="mb-show">
+  <div id="news">Welcome to the Vırtual Summıt orgınazed by eventmagıx</div>
+</section>
+
+<section id="enter-page" class="extra-sponsorlar" style="position:relative;">
+	
+	<div class=" home-program-v2 pt-100">
+	   <div class="container">
+	   
+			<div class="row">
+				<div class="schedule-box clearfix pt-30 pb-30 pl-15 pr-15">
+					<div class="col-md-12">
+						<h3 class="p-2 bwi-color-123 m-0">Oturum Sponsorları</h3>
+					</div>
+					<div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/cceed26f-17f1-45a7-81a1-cd9ad7f46388.jpg" alt="Opet" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Opet</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/381d3004-4d2b-49cd-9f73-5e409dfd68e6.jpg" alt="Garanti BBVA" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Garanti BBVA</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/029e0784-1ef2-4ce4-875e-27d05cfd430e.jpg" alt="Siemens" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Siemens</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/30d1e9df-7168-492c-b4f9-4f2a764d75b8.jpg" alt="Bayer" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Bayer</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/8a829505-1155-45da-bf62-24520ff6543b.jpg" alt="Facebook" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Facebook</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/f9e9d8f7-edbc-4f3c-b6f3-affeed2844f4.jpg" alt="Instagram" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Instagram</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/efd16f9e-2e97-4259-8bb1-f9a7a48f38eb.jpg" alt="Nescafe" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Nescafe</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/9450ff36-78c1-45e1-ab21-0e62c112ef1c.jpg" alt="Trendyol" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Trendyol</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/4d021d8a-fcea-46f3-81aa-e95838360000.jpg" alt="Google" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Google</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/d6aa4165-33d6-422b-acfe-6daed133a7a2.jpg" alt="Youtube" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Youtube</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/b1ac8fa6-1573-4143-b299-0fb4b4fcb058.jpg" alt="Shell" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Shell</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/6617acc9-78d9-4f97-9223-d2756e849756.jpg" alt="Adform" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Adform</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/87571f46-b24d-47e5-8ab1-e5299f4ca655.jpg" alt="Alaaddin" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Alaaddin</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/47e2c953-caaf-4198-8e18-23e49f93a4a1.jpg" alt="shutterstock" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">shutterstock</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/54787076-653e-4e6b-a475-2c5db81ed133.jpg" alt="Cargill" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Cargill</h5></div></div>
+					<div class="col-md-12">
+						<h3 class="p-2 bwi-color-123 m-0">Medya Ana Sponsorları</h3>
+					</div>
+					<div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/2ea9a05d-ff22-4aac-9aa6-ef6559c8506d.jpg" alt="Habertürk" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Habertürk</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/1851cc81-d18d-498a-ac50-a800bd88b416.jpg" alt="Bloomberg HT" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Bloomberg HT</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/c17323b0-aa59-4c38-b1bb-a103043322c1.jpg" alt="Show TV" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Show TV</h5></div></div>
+					<div class="col-md-12">
+						<h3 class="p-2 bwi-color-123 m-0">Destekleyenler</h3>
+					</div>
+					<div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/763f0ad8-e653-4255-a286-acec2b017383.jpg" alt="Migros" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Migros</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/46a1ebac-4b88-47be-a3b0-ab122d79c986.jpg" alt="Tat" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Tat</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/c713f7ef-466c-43d0-ab8d-bc413a56056f.jpg" alt="Loreal" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Loreal</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/32bbb321-aa20-4312-b263-e11c080e5b67.jpg" alt="Mediamarkt" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Mediamarkt</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/cdc07668-79fe-4326-82ed-f6f69cbbc9d6.jpg" alt="Mondelez" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Mondelez</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/e95d86fa-b514-4374-a584-665c4fd1e530.jpg" alt="Beşiktaş Belediyesi" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Beşiktaş Belediyesi</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/6ec807ef-8f58-4867-919f-7ebca14bb937.jpg" alt="UNIQ" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">UNIQ</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/1ee64687-bd88-4535-8d28-59939ef96667.jpg" alt="FoxPlay" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">FoxPlay</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/1a5a2b6e-cf9c-4c11-b3fd-99b544b86103.jpg" alt="İlbak" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">İlbak</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/9d273ba9-5fd0-470c-b0cb-146d87d7ec8a.jpg" alt="Kafa Radyo" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Kafa Radyo</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/715f9d00-0f3b-47c8-830e-85c8b3589593.jpg" alt="Es medya" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Es medya</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/4b113674-5bc9-4d25-8d18-e4b377394088.jpg" alt="Sistem9" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Sistem9</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/a409b936-ff3c-4213-813c-98e144aa6a72.jpg" alt="JoyFM" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">JoyFM</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/636fe0dc-9b66-471c-8de3-fb572804c1a1.jpg" alt="Karnaval" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Karnaval</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/9f71e596-799c-480f-ad7b-d0e40a704480.jpg" alt="SporX" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">SporX</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/034b6962-d6a6-428a-b38c-7e53c9daa5c4.jpg" alt="Sağlık Sponsoru" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Sağlık Sponsoru</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/ed67bd13-a24d-4586-9568-5c88a440193a.jpg" alt="Dijital Ajanslar" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Dijital Ajanslar</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/925c7101-6552-41ef-981f-c817bcbf7335.jpg" alt="DAN" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">DAN</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/766d1b78-51c5-466d-ad80-97b4cc5d202e.jpg" alt="Boden360" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">Boden360</h5></div></div><div class="col-md-3 mb-30 pl-4 pr-4 d-flex justify-content-center"><div class="shadow p-30 mt-5"><img src="images/sponsor/de08d950-827a-42aa-ae87-0560e72e9d4f.jpg" alt="EkşiSözlük" width="201" height="201"><h5 class="bwi-color-123 mt-3 mb-0">EkşiSözlük</h5></div></div>
+				</div>
+			</div>
+			
+	   </div>
+	</div>
+
+</section>
+<style>
+.shadow {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+h3.bwi-color-123 {
+    color: #EF4123 !important;
+	line-height:1.5;
+    font-weight: 400;
+    font-size:25px;
+}
+h5.bwi-color-123 {
+    color: #EF4123 !important;
+	line-height:1.5;
+    font-weight: 400;
+    font-size:18px;
+}
+</style>
+
+<div id="metabolizmaPopup" class="modal fade company-popup" role="dialog">
+		<div class="modal-dialog ">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header" style="height:auto;">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h3>56. Ulusal Diyabet Metabolizma ve Beslenme Hastalıkları Kongresi</h3>
+				</div>
+				<div class="modal-body pt-30">
+					<div class="row">
+						 <div class="col-md-4 mb-30">
+							<a href="javascript:void(0);" class="fullscreen-btn bilimsel-btns m-0">06 Kasım</a>
+						 </div>
+						 <div class="col-md-4 mb-30">
+							<a href="javascript:void(0);" class="fullscreen-btn bilimsel-btns m-0">07 Kasım</a>
+						 </div>
+						 <div class="col-md-4 mb-30">
+							<a href="javascript:void(0);" class="fullscreen-btn bilimsel-btns m-0">08 Kasım</a>
+						 </div>
+						 <div class="col-md-4 mb-30">
+							<a href="javascript:void(0);" class="fullscreen-btn bilimsel-btns m-0">09 Kasım</a>
+						 </div>
+						 <div class="col-md-4 mb-30">
+							<a href="javascript:void(0);" class="fullscreen-btn bilimsel-btns m-0">10 Kasım</a>
+						 </div>
+					 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<link rel="stylesheet" type="text/css" href="css/programv2/programv2.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script src="js/eocjs-newsticker.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+	$("#news").eocjsNewsticker({
+		speed: 25,
+		timeout: 0.5
+	  });
+});
+
+
+</script>
+<script>
+$(".schedule-box .tab-btn").on("click", function () {
+    var target = $($(this).attr("data-id"));
+    $(".schedule-box .tab-btn").removeClass("active");
+    $(this).addClass("active");
+    $(".schedule-box .tab").fadeOut(0);
+    $(".schedule-box .tab").removeClass("current");
+    $(target).fadeIn(300);
+    $(target).addClass("current");
+    var windowWidth = $(window).width();
+    if (windowWidth <= 700) {
+        $("html, body").animate({ scrollTop: $(".tabs-box").offset().top }, 1000);
+    }
+});
+$(".schedule-box .hour-box .toggle-btn").on("click", function () {
+    var target = $($(this).next(".content-box"));
+    $(this).toggleClass("active");
+    $(target).slideToggle(300);
+    $(target).parents(".hour-box").toggleClass("active-box");
+});
+</script>
+</body>
+
+</html>

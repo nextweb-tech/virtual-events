@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+
+</head>
+
+<body>
+
+<header id="in-header">
+	<div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="header-menu">
+                    <li><a href="enter.html">Lobby</a></li>
+                    <li><a href="exhibition.html">Exhibition</a></li>
+                    <li><a href="halls.html">Main Hall</a></li>
+                    <li class="active"><a href="halls-a.html">Hall A</a></li>
+                    <li><a href="halls-b.html">Hall B</a></li>
+                    <li><a href="sb-ocean.html">SB Ocean</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    
+                </ul>
+            </div>
+            <div class="col-md-3 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="halls-page-in" style="background-image: url(images/halla-booth.jpg);">
+	<div class="halls-page-cont">
+        <div class="halls-page-inner">
+
+            <div class="contall extra-hall">
+                <div class="box3 allboxs ps-r ml-0" style="margin-top: -69px;">
+                    <iframe width="100%" height="500" src="https://player.vimeo.com/video/454459141?autoplay=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+.fullsize iframe {
+    height: 95vh !important;
+}
+</style>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script>
+
+$( ".fullscreen-btn" ).click(function() {
+  $("#embedWidget").addClass("fullsize");
+});
+
+$( ".fulls-close-btn" ).click(function() {
+  $("#embedWidget").removeClass("fullsize");
+});
+
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+</script>
+
+</body>
+
+</html>

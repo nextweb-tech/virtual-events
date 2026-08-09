@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/jquery.mapify.css">
+    <link rel="stylesheet" href="css/eocjs-newsticker.css">
+
+</head>
+
+<body>
+
+<header id="in-header">
+	<div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="header-menu">
+                    <li class="active"><a href="enter.html">Lobby</a></li>
+                    <li><a href="exhibition.html">Exhibition</a></li>
+                    <li><a href="halls.html">Hall A</a></li>
+                    <li><a href="halls-b.html">Hall B</a></li>
+                    <li><a href="halls-c.html">Hall C</a></li>
+                    <li><a href="halls-d.html">Hall D</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    
+                    <li><a href="eposter.html">Document</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="enter-page-in" style="background: #fff;">
+
+    <img class="mapclass" src="images/enter-img.jpg" width="1760" height="869" usemap="#Map" border="0" />
+<map name="Map" id="Map">
+  <area id="videoopen"  data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/MIQdJkoTh48?autoplay=1" shape="poly" coords="258,321,237,485,545,507,555,386,258,321" href="#" alt="Area 1" title="Area 1" />
+  <area id="area2" shape="poly" coords="535,555,530,614,567,609,567,554" href="#" alt="Area 2" title="Area 2" />
+  <area shape="poly" coords="585,553,584,612,615,613,618,554,584,554" href="#" alt="Area 3" title="Area 3" />
+  <area shape="poly" coords="632,554,633,604,735,606,735,556,633,554" href="#" alt="Area 4" title="Area 4" data-toggle="modal" data-target="#videoModal2" data-theVideo="https://player.vimeo.com/video/54267909?autoplay=1" />
+  <area shape="poly" coords="1052,542,1056,607,1209,610,1206,539,1053,543" href="#" alt="Area 5" title="Area 5" />
+  <area shape="poly" coords="1434,486,1562,475,1525,223,1406,259,1434,487" href="#" alt="Area 6" title="Area 6" />
+</map>
+
+	<a href="agenda.html" class="agenda-btn btns">Agenda</a>
+	<a href="halls.html" class="hall-a btns">Hall A</a>
+	<a href="halls-b.html" class="hall-b btns">Hall B</a>
+	<a href="halls-c.html" class="hall-c btns">Hall C</a>
+	<a href="halls-d.html" class="hall-d btns">Hall D</a>
+	<a href="exhibition.html" class="exhibition-btn btns">Exhibition</a>
+  <a href="eposter.html" class="eposter-btn btns">Document</a>
+
+</section>
+
+<section id="footer-text">
+  <div id="news">Welcome to the Vırtual Summıt orgınazed by eventmagıx</div>
+</section>
+
+<!-- ibm video Modal -->
+<div id="videoModal" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <iframe width="100%" height="328" src=""></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ibm video Modal -->
+<div id="videoModal2" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <iframe width="100%" height="328" src=""></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<input type="button" value="click to toggle fullscreen" class="screen-btn" onclick="toggleFullScreen(document.body)" style="display:none;">
+<script src="js/jquery.min.js"></script>
+<script src="js/redirection-mobile.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script src="js/eocjs-newsticker.js"></script>
+<script>
+SA.redirection_mobile({
+	redirection_param : "mobile_redirection",
+	mobile_url : "virtual.eventmagix.com/3dmobile/enter.html",
+	mobile_prefix : "https",
+	tablet_redirection : "false",
+	cookie_hours : "2",
+});
+
+function autoPlayYouTubeModal(){
+  var trigger = $("body").find('[data-toggle="modal"]');
+  trigger.click(function() {
+    var theModal = $(this).data( "target" ),
+    videoSRC = $(this).attr( "data-theVideo" ), 
+    videoSRCauto = videoSRC+"?autoplay=1" ;
+    $(theModal+' iframe').attr('src', videoSRCauto);
+    $(theModal+' button.close').click(function () {
+        $(theModal+' iframe').attr('src', videoSRC);
+    });   
+  });
+}
+
+$(document).ready(function(){
+  autoPlayYouTubeModal();
+});
+
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+
+  $("#news").eocjsNewsticker({
+    speed: 25,
+    timeout: 0.5
+  });
+
+});
+
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+    
+});
+
+function toggleFullScreen(elem) {
+    // ## The below if statement seems to work better ## if ((document.fullScreenElement && document.fullScreenElement !== null) || (document.msfullscreenElement && document.msfullscreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
+        if (elem.requestFullScreen) {
+            elem.requestFullScreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullScreen) {
+            elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+    } else {
+        if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}
+
+setTimeout(function(){
+ $(".screen-btn").click();
+}, 400);
+
+$("#videoModal .close").click(function(){
+    
+  setTimeout(function(){
+  $("#videoModal .modal-content iframe").attr("src","");
+}, 800);
+  
+});
+
+$("#videoModal2 .close").click(function(){
+    
+  setTimeout(function(){
+  $("#videoModal2 .modal-content iframe").attr("src","");
+}, 800);
+  
+});
+
+if(!window.location.search.substring(1) == "full=true") { // do not redirect if querystring is ?full=true
+    if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) { // detect mobile browser
+      window.location.replace("http://virtual.eventmagix.com/3dmobile/enter.html"); // redirect if mobile browser detected
+    }
+  }
+</script>
+<script>var Chatbot={appId:"sc180abb8-c49d-4f01-999c-fc242164f787",mode:"livechat"};!function(t,a){var e=function(){(e.q=e.q||[]).push(arguments)};e.q=e.q||[],t.ChatbotApi=e;!function(){var t=a.createElement("script");t.type="text/javascript",t.async=1,t.src="https://widget.installchatbot.com/static/js/widget.js";var e=a.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();}(window,document)</script>
+
+</body>
+
+</html>

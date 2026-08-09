@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/jquery.mapify.css">
+
+    <style type="text/css">
+    
+    /* Mapify custom popOver example */
+    
+    .mapify-popOver strong{
+        font-weight: 400;
+        font-size:24px;
+        line-height: 1em;
+        display: block;
+        margin-bottom: 10px;
+        color: #000;
+    }
+    .mapify-popOver{
+        color: #999;
+        font-size: 16px;
+        height: 130px;
+    }
+    .mapify-popOver-content{
+        position: relative;
+        top:50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+    }
+    
+    .mapify-popOver.customPopOver{
+        background: #09f;
+    }
+    
+    /* Custom hovering style */
+    .mapify-hover{
+        fill:rgba(0,0,0,0.15);
+        stroke: #fff;
+        stroke-width: 2;
+    }
+    
+    .customHover{
+        fill:#09f;
+        stroke: #fff;
+        stroke-width: 2;
+    }
+    
+</style>
+
+</head>
+
+<body>
+
+<header id="in-header">
+	<div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="header-menu">
+                    <li><a href="enter.html">Lobby</a></li>
+                    <li class="active"><a href="exhibition.html">Exhibition</a></li>
+                    <li><a href="halls.html">Hall A</a></li>
+                    <li><a href="halls-b.html">Hall B</a></li>
+                    <li><a href="halls-c.html">Hall C</a></li>
+                    <li><a href="halls-d.html">Hall D</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    
+                    <li><a href="eposter.html" target="_blank">Eposter</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="exhibition-select-cont" class="pt-80">
+    <div class="container">
+        <div class="exhibition-select">
+            <div class="accordion-container">
+              
+              <div class="set">
+                <a href="#">
+                  Company List 
+                  <i class="fa fa-plus"></i>
+                </a>
+                <div class="content">
+                  <ul>
+                    <li><a class="active" href="">eventmagix</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="exhibition-search">
+                <div class="row">
+                  <div class="col-md-8 pr-0">
+                    <input type="text" name="Email" class="search-text" id="" aria-required="true" placeholder="Search Company Name">
+                  </div>
+                  <div class="col-md-4 p-0">
+                    <input type="submit" name="action_doLogin" value="Search" class="search-btn-main" id="">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="enter-page-in" style="background: none !important;">
+
+    <img style="display:none;" width="578px" height="716px" border="0" usemap="#Map" />
+
+    <img src="images/exhibition-bg.jpg" width="1760" height="869" usemap="#Map2" border="0" />
+        
+    <map name="Map2" id="Map2">
+
+    <area data-toggle="modal" data-target="#myModal" data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="371,582,358,621,375,672,365,712,543,665,541,587,532,561,430,582,425,572,370,581" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="679,519,689,577,707,625,839,592,836,533,829,525,795,514,795,498,760,505,740,500,678,519" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="1185,494,1269,473,1272,434,1214,404,1137,424,1132,460,1185,494" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="1350,399,1320,406,1319,412,1294,423,1351,452,1408,437,1410,418,1380,403,1381,393,1419,384,1420,374,1357,351,1301,362,1299,372,1351,392,1350,399" href="#" />
+
+
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="431,516,428,542,517,524,518,490,504,440,418,453,418,463,419,475,431,517" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="666,433,671,471,680,491,763,475,758,431,747,412,707,420,707,426,665,432" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="861,404,861,424,894,460,980,443,964,425,964,395,947,381,919,387,918,396,859,404" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="1033,394,1085,427,1146,413,1149,365,1128,358,1110,358,1090,349,1071,356,1052,353,1043,348,1035,350,1032,392" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="1222,386,1254,379,1259,341,1233,332,1201,336,1197,376,1222,387" href="#" />
+
+
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="435,402,447,444,526,435,528,420,518,379,439,387,434,403" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="628,340,637,392,647,424,726,409,720,399,716,398,712,362,718,359,717,350,705,331,628,341" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="801,372,829,400,919,387,914,376,913,359,897,356,895,343,876,344,869,338,800,347,800,372" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="962,349,988,366,1025,361,1028,347,1013,340,1011,333,1017,335,1030,324,1027,318,989,314,977,325,977,331,1003,333,1004,342,963,349" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="1102,311,1100,336,1115,346,1157,335,1158,313,1149,311,1149,306,1101,312" href="#" />
+
+
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="443,351,452,382,531,377,522,343,443,351" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="789,330,801,344,839,339,838,331,831,329,828,324,819,323,819,318,824,315,823,307,801,310,801,317,808,319,808,327,789,330" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="909,315,935,331,980,325,978,311,974,310,974,295,949,290,911,289,908,314" href="#" />
+    <area data-nbmembre="1" alt="eventmagix" title="eventmagix" shape="poly" coords="1046,318,1110,309,1100,304,1100,299,1093,295,1091,272,1073,264,1012,272,1013,301,1046,318" href="#" />
+
+        
+    </map>
+
+</section>
+
+<!-- Company Modal -->
+<div id="myModal" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="row bg-grey pl-30 pr-30">
+            <div class="col-md-3">
+                <img class="sponsor-big-logo" src="images/sponsor-logo-big.gif">
+            </div>
+            <div class="col-md-9">
+                <h3 class="mt-40">eventmagix</h3>
+                <h4 class="m-0"><a href="" target="_blank">www.companyname.com</a></h4>
+            </div>
+        </div>
+
+        <div class="row pl-30 pr-30 pt-50">
+            <div class="col-md-12">
+                <p><img src="images/company-img.jpg" /></p>
+                <h5>About</h5>
+                <p>Donec pulvinar augue libero. Cras pretium, augue et fringilla venenatis, ex tellus fringilla erat, sed volutpat sem eros at quam. Aenean quis tincidunt mauris, non imperdiet arcu. Nullam eu mi ligula. Aliquam auctor eget orci eget vulputate. Nulla a nisi in nisl eleifend luctus et ac ante. Mauris sit amet nisi commodo, fringilla ipsum eget, laoreet odio.</p>
+                <p>Morbi dapibus diam nec lectus condimentum, et ullamcorper ante egestas. Ut augue risus, euismod at sem ut, accumsan posuere augue. Duis sed nisl nulla. Sed dictum nisi eros, a bibendum orci feugiat et. Mauris malesuada, urna ut pulvinar malesuada, erat sapien dignissim erat, nec accumsan magna urna at nulla.</p>
+                <p class="text-right"><a href="stand.html" class="btn-view">View Stand</a></p>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="share-cont">
+            <ul>
+              <li><a href=""><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+              <li><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a></li>
+              <li><a href=""><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a></li>
+            </ul>
+           </div>
+
+    </div>
+
+  </div>
+</div>
+
+<style type="text/css">
+.accordion-container{
+  position: relative;
+  max-width: 500px;
+  height: auto;
+  margin: 10px auto;
+}
+.accordion-container > h2{
+  text-align: center;
+  color: #fff;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.set{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.set > a{
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+  background-color: #fcee20;
+}
+.set > a i{
+  float: right;
+  margin-top: 2px;
+}
+.set > a.active{
+  background-color:#fcee20;
+  color: #000;
+}
+.content{
+  background:rgba(5,130,212, .8);
+  display:none;
+  padding:15px;
+}
+.content ul li a.active{color:#fcee20 !important; font-weight: 500; text-decoration: underline;;}
+.content ul li a{color:#fff; line-height: 28px;}
+.content ul li a:hover{color:#fcee20; text-decoration: underline;}
+.content p{
+  padding: 10px 15px;
+  margin: 0;
+  color: #fff;
+}
+</style>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.mapify.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+    
+    $("img[usemap]:first").mapify({
+        hoverClass: "drop-hover"
+    });
+    
+    $("img[usemap]:last").mapify({
+        popOver: {
+            content: function(zone){
+                return "<strong>"+zone.attr("data-title")+"</strong>"+zone.attr("data-nbmembre")+" Members";
+            },
+            delay: 0.7,
+            margin: "15px",
+            height: "130px",
+            width: "260px"
+        },
+        onAreaHighlight: function(){
+            console.log("onAreaHighlight callback");
+        },
+        onMapClear: function(){
+            console.log("onMapClear callback");
+        }
+    });
+    
+    $("#dynamicClassChange").click(function() {
+        $(this).attr("data-hover-class","hover-green");
+    });
+    
+});
+
+
+$(document).ready(function() {
+  $(".set > a").on("click", function() {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(this)
+        .siblings(".content")
+        .slideUp(200);
+      $(".set > a i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+    } else {
+      $(".set > a i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+      $(this)
+        .find("i")
+        .removeClass("fa-plus")
+        .addClass("fa-minus");
+      $(".set > a").removeClass("active");
+      $(this).addClass("active");
+      $(".content").slideUp(200);
+      $(this)
+        .siblings(".content")
+        .slideDown(200);
+    }
+  });
+});
+
+</script>
+</body>
+
+</html>

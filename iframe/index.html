@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iframe</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom-bootstrap-margin-padding.css">
+</head>
+
+<body>
+<section id="area">
+	<div class="left-section">
+		<iframe class="videoframe" src="https://player.vimeo.com/video/61877730" width="100% frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+	</div>
+
+	<div class="right-section">
+		<iframe class="iframes" width="100%" src="http://sb2020turkey.askmagix.com/mainhalltr/question"></iframe>
+	</div>	
+</section>
+ <style>
+ .left-section{
+	width: 80%;
+	display: inline-block;
+	position: absolute;
+	height: 100%;
+ }
+ .right-section{
+	width: 20%;
+	display: inline-block;
+	position: absolute;
+	height: 100%;
+	right: 0;
+	top: 0px;
+	background:#cecece;
+ }
+ body{background:#fff;}
+ .iframes{border:none; position:absolute; left:0px; top:0px; height:100%;}
+ #area{
+	position:absolute;
+	width:100%;
+	height:100%;
+ }
+ .videoframe{height:45vw; border:none;}
+ </style>
+</body>
+
+</html>

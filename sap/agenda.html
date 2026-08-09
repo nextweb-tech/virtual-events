@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+
+</head>
+
+<body>
+
+<header id="in-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="header-menu">
+                    <li><a href="index.html">Lobby</a></li>
+                    <li><a href="exhibition.html">SAP Experience Center </a></li>
+                    <li class="active"><a href="agenda.html">Agenda</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="quiz.html">Survey</a></li>
+                    <li><a href="javascript:void(0);">Meeting Request </a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="enter-page">
+	
+	<div class=" home-program-v2 pt-100">
+	   <div class="container">
+	      <!--Schedule Box--> 
+	      <div class="schedule-box clearfix wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+
+	         <!--Tabs Box--> 
+	         <div class="tabs-box">
+	            <!--Tab / Current / monday--> 
+	            <div class="tab current" id="dayhalla">
+	               <div class="hour-box">
+	                  <div class="hour">08:30 AM</div>
+	                  <div class="img-circle circle"><span></span></div>
+	                  <div class="toggle-btn">
+	                     <h3>Welcome & Introduction</h3>
+	                  </div>
+	               </div>
+
+	               <div class="hour-box">
+	                  <div class="hour">09:00 AM</div>
+	                  <div class="img-circle circle"><span></span></div>
+	                  <div class="toggle-btn">
+	                     <h3>User Experience Solutions </h3>
+	                  </div>
+	               </div>
+
+	               <div class="hour-box">
+	                  <div class="hour">09:45 AM </div>
+	                  <div class="img-circle circle"><span></span></div>
+	                  <div class="toggle-btn">
+	                     <h3>Coffee Break</h3>
+	                  </div>
+	               </div>
+
+	               <div class="hour-box">
+	                  <div class="hour">10:15 AM </div>
+	                  <div class="img-circle circle"><span></span></div>
+	                  <div class="toggle-btn">
+	                     <h3>AP Experience Zone Guided Tour </h3>
+	                  </div>
+	               </div>
+
+	               <div class="hour-box">
+	                  <div class="hour">11:30 AM </div>
+	                  <div class="img-circle circle"><span></span></div>
+	                  <div class="toggle-btn">
+	                     <h3>Question & Answers</h3>
+	                  </div>
+	               </div>
+	               
+	            </div>
+	            <!--Tab / Current / tuesday--> 
+	            <div class="tab" id="dayhallb">
+	               
+	            </div>
+	            <!--Tab / Current / wednesday--> 
+	            <div class="tab" id="dayhallc">  </div>
+	            <!--Tab / Current / thursday--> 
+	            <div class="tab" id="dayhalld">  </div>
+	            <!--Tab / Current / friday--> 
+	            <div class="tab" id="dayauditorium">  </div>
+	            <!--Tab / Current / saturday--> 
+	            <div class="tab" id="dayexhibition">  </div>
+	            <!--Tab / Current / saturday--> 
+	            <div class="tab" id="sponsorhall">  </div>
+	         </div>
+	         <!--Tabs Box End--> 
+	         <div class="share-cont">
+	         	<ul>
+	         		<li><a href=""><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+	         		<li><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a></li>
+	         		<li><a href=""><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a></li>
+	         	</ul>
+	         </div>
+	      </div>
+	      <!--Schedule Box End--> 
+	   </div>
+	</div>
+
+</section>
+
+<link rel="stylesheet" type="text/css" href="css/programv2/programv2.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+</script>
+<script>$('.schedule-box .tab-btn').on('click', function() {var target = $($(this).attr('data-id'));$('.schedule-box .tab-btn').removeClass('active');$(this).addClass('active');$('.schedule-box .tab').fadeOut(0);$('.schedule-box .tab').removeClass('current');$(target).fadeIn(300);$(target).addClass('current');var windowWidth = $(window).width();if (windowWidth <= 700) {$('html, body').animate({ scrollTop: $('.tabs-box').offset().top }, 1000);}});$('.schedule-box .hour-box .toggle-btn').on('click', function() {var target = $($(this).next('.content-box'));$(this).toggleClass('active');$(target).slideToggle(300);$(target).parents('.hour-box').toggleClass('active-box');});</script>
+</body>
+
+</html>

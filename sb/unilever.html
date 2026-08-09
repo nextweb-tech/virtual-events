@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/slick.css">
+
+</head>
+
+<body>
+
+<header id="in-header">
+  <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul id="header-menu">
+                    <li><a href="enter.html">Lobby</a></li>
+                    <li class="active"><a href="exhibition.html">Exhibition</a></li>
+                    <li><a href="halls.html">Main Hall</a></li>
+                    <li><a href="halls-a.html">Hall A</a></li>
+                    <li><a href="halls-b.html">Hall B</a></li>
+                    <li class="active"><a href="sb-ocean.html">SB Ocean</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    
+                </ul>
+            </div>
+            <div class="col-md-3 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="stand2-page-in" class="extra-stand-conts" style="background-image: url(images/unilever-booth.jpg);">
+	
+	<span data-toggle="popover" data-trigger="hover" data-placement="top" data-content="" data-original-title="Sales Person" href="#" class="stand-1 stand-btns icon-sales-person">
+		<a data-toggle="modal" data-target="#SalesPersonPopup"  href="#"></a>
+	</span>
+	<span data-toggle="popover" data-trigger="hover" data-placement="top" data-content="" data-original-title="Presentation" class="stand-2 stand-btns icon-presentation">
+		<a data-toggle="modal" data-target="#PresentationPopup"  href="#"></a>
+	</span>
+
+	<span data-toggle="popover" data-trigger="hover" data-placement="top" data-content="" data-original-title="About Us" class="stand-3 stand-btns icon-about">
+		<a data-toggle="modal" data-target="#aboutPopup"  href="#"></a>
+	</span>
+	
+	<span data-toggle="popover" data-trigger="hover" data-placement="top" data-content="" data-original-title="Videos" class="stand-4 stand-btns icon-video">
+		<a data-toggle="modal" data-target="#videoModal"  href="#"></a>
+	</span>
+
+	<span data-toggle="popover" data-trigger="hover" data-placement="top" data-content="" data-original-title="Chat" class="stand-5 stand-btns icon-about">
+		<a href="#"></a>
+	</span>
+	
+	<span data-toggle="popover" data-trigger="hover" data-placement="top" data-content="" data-original-title="Brochures" class="stand-6 stand-btns icon-broshures">
+		<a data-toggle="modal" data-target="#PresentationPopup"  href="#"></a>
+	</span>
+	
+</section>
+
+
+
+<!-- Sales Person Modal -->
+<div id="SalesPersonPopup" class="modal fade company-popup stand-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h3>Sales Person</3>
+      </div>
+      <div class="modal-body pt-0">
+        
+		<div class="mt-30 pl-20 pr-20 pt-20 pb-20">
+			<div id="product__slider">
+			  <div class="row">
+				<div class="col-md-12 text-center">
+					<p style="font-size:16px;">Bizlere ulaşmak için;<br />
+					<a style="color:rgba(28,167,146, 1);" href="mailto:kurumsal-iletisim.unilever-tr@unilever.com">kurumsal-iletisim.unilever-tr@unilever.com</a><br />
+					Mail atabilirsiniz.</p>
+				</div>
+			  </div>
+			</div>
+			
+		</div>
+		
+      </div>
+
+      <div class="share-cont">
+		<ul>
+		  <li><a href=""><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+		</ul>
+	   </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Presentation Modal -->
+<div id="PresentationPopup" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content presentation-imgs">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h3>Presentations</h3>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="sales-person">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/presentation1.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Presentation 1</h2>
+						  <p>Click Here</p>
+						</div>
+						<a alt="Presentation 1" title="Presentation 1" href="images/presentation1.jpg"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/presentation2.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Presentation 2</h2>
+						  <p>Click Here</p>
+						</div>
+						<a alt="Presentation 2" title="Presentation 2" href="images/presentation2.jpg"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/presentation3.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Presentation 3</h2>
+						  <p>Click Here</p>
+						</div>
+						<a href="images/presentation3.jpg"></a>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/presentation4.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Presentation 4</h2>
+						  <p>Click Here</p>
+						</div>
+						<a href="images/presentation4.jpg"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/presentation5.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Presentation 5</h2>
+						  <p>Click Here</p>
+						</div>
+						<a href="images/presentation5.jpg"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/presentation6.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Presentation 6</h2>
+						  <p>Click Here</p>
+						</div>
+						<a href="images/presentation6.jpg"></a>
+					  </div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+      </div>
+
+      <div class="share-cont">
+            <ul>
+              <li><a href=""><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+              <li><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a></li>
+              <li><a href=""><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a></li>
+            </ul>
+           </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- About Modal -->
+<div id="aboutPopup" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h3>About</h3>
+      </div>
+      <div class="modal-body pt-0">
+		<div class="row bg-grey pl-30 pr-30">
+            <div class="col-md-4">
+                <img class="sponsor-big-logo" src="images/unilever-about-logo.gif">
+            </div>
+            <div class="col-md-8">
+                <h3 class="mt-20 text-left">Unilever</h3>
+                <h4 class="m-0"><a href="https://www.unilever.com.tr/" target="_blank">www.unilever.com.tr</a></h4>
+            </div>
+        </div>
+        <div class="row pl-30 pr-30 pt-50">
+            <div class="col-md-12">
+				<p>Unilever’in geçmişi, Hollandalı margarin şirketi Margarine Unie ile İngiliz sabun şirketi Lever Brothers’ın 1930 yılında birleşmesine kadar uzanmaktadır.</p>
+				<p>Unilever, dünyanın dört bir yanında binlerce hissedarı olan %100 halka açık, şeffaf ve uluslararası bir şirkettir.</p>
+				<p>Bugün, dünyanın 190’dan fazla ülkesinde, her gün 2,5 milyar insana ulaşıyor ve tüketicilerimizin beslenmelerine yardımcı oluyor, kendilerini, evlerini temiz ve ferah tutmak için tercih ettikleri ürünleri üretiyor, pazarlıyor ve dağıtıyoruz.</p>
+				<br />
+				<p>Unilever Türkiye Hakkında</p>
+				<p>Unilever, Türkiye’de 100 yılı aşkın bir süredir katma değer yaratmaktadır. Türkiye’de her 10 evin 9’unda bir Unilever ürünü kullanılmaktadır.</p>
+				<p>Unilever olarak bu topraklardaki tarihimiz, Sunlight markalı sabun gibi ürünlerimizle yüzyıla yakın bir geçmişe dayanmaktadır. 1924 yılında G&A Baker Limited şirketiyle tanıştığımız Türkiye’de, ilk yatırımımız, 1952’de İstanbul/Bakırköy’de kurulan SANA fabrikasıyla gerçekleşmiştir.</p>
+				<p>Unilever Türkiye olarak, bugün 8 fabrika yatırımımız, 5.000’i aşkın çalışanımız ve 34 ülkeye ihracatımızla Türkiye ekonomisine katma değer sağlıyoruz.</p>
+				<p>Gıda, dondurma ve içecek, ev, kişisel bakım ve güzellik kategorilerinde; OMO, Rinso, Yumoş, Domestos, Cif, Sunlight, Elidor, Dove, Dove Men, Toni&Guy, Signal, Clear, Rexona, Lux, Axe, Lipton, Knorr, Calve, Algida, Carte d’Or, Cornetto, Nogger, Magnum, Max, UFS ve Vaseline gibi lider markalarımızı tüketicilerimizin beğenisine sunuyoruz.</p>
+				<p>Contact buton link<br />
+				https://www.unilever.com.tr/contact/contact-form/</p>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="share-cont">
+            <ul>
+              <li><a href=""><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+              <li><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a></li>
+              <li><a href=""><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a></li>
+            </ul>
+           </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- videos Modal -->
+<div id="videoModal" class="modal fade company-popup" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h3>Videos</h3>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="video-gallery ">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 1</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=oUqG5ISv71s"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 2</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=gsEwmumEsKU"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 3</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=aa62s8lQ2NY"></a>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 4</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=oUqG5ISv71s"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 5</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=gsEwmumEsKU"></a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="gallery-item">
+					  <img src="images/video-bg.jpg" alt="" />
+					  <div class="gallery-item-caption">
+						<div>
+						  <h2>Video 6</h2>
+						  <p>Play Video</p>
+						</div>
+						<a class="vimeo-popup" href="https://www.youtube.com/watch?v=aa62s8lQ2NY"></a>
+					  </div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+      </div>
+
+      <div class="share-cont">
+            <ul>
+              <li><a href=""><i class="fa fa-print" aria-hidden="true"></i> Print</a></li>
+              <li><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a></li>
+              <li><a href=""><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a></li>
+            </ul>
+           </div>
+
+    </div>
+
+  </div>
+</div>
+
+<style>
+.modal {z-index:999 !important;}
+.modal-backdrop {z-index:998 !important;}
+
+
+.company-popup h3 {
+    font-size: 31px;
+    color:rgba(28,167,146, 1);
+    font-weight: 400;
+    margin: 0px;
+    text-align: center;
+    line-height: 1.9;
+}
+.mfp-content{max-width:100% !important;}
+
+@media all and (min-width: 120px) and (max-width: 960px) {
+	.mfp-content{height:100vh !important;}
+}
+</style>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/eocjs-newsticker.js"></script>
+<script>
+
+$(window).load(function(e) {
+	$("#news").eocjsNewsticker({
+		speed: 25,
+		timeout: 0.5
+	  });
+});
+$(document).ready(function() {
+  $('.video-gallery').magnificPopup({
+	  delegate: 'a', 
+	  type: 'iframe',
+	  gallery:{
+		enabled:true
+	  }
+	});
+  $('.meetme-btns').magnificPopup({
+	  delegate: 'a', 
+	  type: 'iframe',
+	  gallery:{
+		enabled:true
+	  }
+	});
+	
+  /* $('#SalesPersonPopup').magnificPopup({
+	  delegate: 'a', 
+	  type: 'iframe',
+	  gallery:{
+		enabled:true
+	  }
+	}); */
+	
+  $('.presentation-imgs').magnificPopup({
+	  delegate: 'a', 
+	  type: 'image',
+	  gallery:{
+		enabled:true
+	  }
+	});
+});
+
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+    
+});
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+});
+
+/* Slick function */
+
+if ( $('.product__slider-main').length ) {
+        var $slider = $('.product__slider-main')
+            .on('init', function(slick) {
+                $('.product__slider-main').fadeIn(1000);
+            })
+            .slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                autoplay: false,
+                lazyLoad: 'ondemand',
+                autoplaySpeed: 3000,
+                asNavFor: '.product__slider-thmb',
+				infinite: false
+            });
+
+    var $slider2 = $('.product__slider-thmb')
+            .on('init', function(slick) {
+                $('.product__slider-thmb').fadeIn(1000);
+            })
+            .slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                lazyLoad: 'ondemand',
+                asNavFor: '.product__slider-main',
+                dots: false,
+                centerMode: false,
+                focusOnSelect: true,
+				vertical: true,
+				verticalSwiping: true,
+				infinite: true
+            });
+
+ //remove active class from all thumbnail slides
+ $('.product__slider-thmb .slick-slide').removeClass('slick-active');
+
+ //set active class to first thumbnail slides
+ $('.product__slider-thmb .slick-slide').eq(0).addClass('slick-active');
+
+ // On before slide change match active thumbnail to current slide
+ $('.product__slider-main').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    var mySlideNumber = nextSlide;
+    $('.product__slider-thmb .slick-slide').removeClass('slick-active');
+    $('.product__slider-thmb .slick-slide').eq(mySlideNumber).addClass('slick-active');
+});
+
+
+}
+
+$('.modal').on('shown.bs.modal', function (e) {
+  $('.product__slider-thmb').slick('setPosition');
+  $('.product__slider-main').slick('setPosition');
+  
+  
+  setTimeout(function(){
+	 $(".product__slider-thmb .first-thumb").click();
+	}, 100);
+  
+});
+/* Slick function */
+
+</script>
+</body>
+
+</html>

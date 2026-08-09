@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Event 3D</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/jquery.mapify.css">
+
+    <style type="text/css">
+    
+    /* Mapify custom popOver example */
+    
+    .mapify-popOver strong{
+        font-weight: 400;
+        font-size:24px;
+        line-height: 1em;
+        display: block;
+        margin-bottom: 10px;
+        color: #000;
+    }
+    .mapify-popOver{
+        color: #999;
+        font-size: 16px;
+        height: 130px;
+    }
+    .mapify-popOver-content{
+        position: relative;
+        top:50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+    }
+    
+    .mapify-popOver.customPopOver{
+        background: #09f;
+    }
+    
+    /* Custom hovering style */
+    .mapify-hover{
+        fill:rgba(0,0,0,0.15);
+        stroke: #fff;
+        stroke-width: 2;
+    }
+    
+    .customHover{
+        fill:#09f;
+        stroke: #fff;
+        stroke-width: 2;
+    }
+    
+</style>
+
+</head>
+
+<body>
+
+<header id="in-header">
+	<div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <ul id="header-menu">
+                    <li><a href="enter.html">Lobby</a></li>
+                    <li class="active"><a href="exhibition.html">Exhibition</a></li>
+                    <li><a href="halls.html">Hall A</a></li>
+                    <li><a href="halls-b.html">Hall B</a></li>
+                    <li><a href="halls-c.html">Hall C</a></li>
+                    <li><a href="halls-d.html">Hall D</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="eposter.html">Eposter</a></li>
+					<li><a href="http://www.rst-network.com/" target="_blank">Network </a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 text-right">
+                <img src="images/white-logo.png" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="exhibition-select-cont" class="pt-80">
+    <div class="container">
+        <div class="exhibition-select">
+            <div class="accordion-container">
+              
+              <div class="set">
+                <a href="#">
+                  Company List 
+                  <i class="fa fa-plus"></i>
+                </a>
+                <div class="content">
+                  <ul>
+                    <li><a class="active" href="">IBM ISRAEL</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                    <li><a href="">Lorem Ipsum Dolares</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="exhibition-search">
+                <div class="row">
+                  <div class="col-md-8 pr-0">
+                    <input type="text" name="Email" class="search-text" id="" aria-required="true" placeholder="Search Company Name">
+                  </div>
+                  <div class="col-md-4 p-0">
+                    <input type="submit" name="action_doLogin" value="Search" class="search-btn-main" id="">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="enter-page-in" style="background: none !important; padding-top:43px;">
+
+    <img style="display:none;" width="578px" height="716px" border="0" usemap="#Map" />
+
+    <img src="images/exhibition-bg.jpg" width="1920" height="946" usemap="#Map2" border="0" />
+        
+    <map name="Map2" id="Map2">
+
+    <area data-nbmembre="1" data-logo="images/simul-logo.gif" alt="Simul Interactive" title="Simul Interactive" shape="poly" coords="404,773,565,738,565,609,550,611,545,605,418,627,403,774" href="stand2.html" />
+    <area data-nbmembre="2" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="659,590,662,616,669,715,818,682,795,563,784,565,780,543,722,555,725,563,668,574,668,589,660,590" href="stand.html" />
+    <area data-nbmembre="3" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="1142,484,1140,493,1112,501,1161,608,1296,578,1280,548,1285,532,1245,462,1141,483" href="stand3.html" />
+    <area data-nbmembre="4" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="1371,448,1315,460,1381,561,1500,534,1464,483,1493,477,1497,468,1444,401,1362,416,1358,424,1372,448" href="stand3.html" />
+    <area data-nbmembre="5" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="441,451,446,460,434,462,425,561,564,536,564,440,529,444,518,421,445,433,442,450" href="stand3.html" />
+
+
+    <area data-nbmembre="6" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="704,407,705,413,646,425,653,520,782,494,766,405,748,407,747,400,704,406" href="stand3.html" />
+    <area data-nbmembre="7" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="963,356,932,362,929,367,868,376,868,386,844,390,867,479,1005,452,973,368,966,370,963,356" href="stand3.html" />
+    <area data-nbmembre="8" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="1070,316,1066,353,1044,355,1085,438,1204,415,1190,389,1193,373,1165,347,1159,336,1152,336,1139,327,1119,328,1106,335,1087,324,1081,312,1069,316" href="stand3.html" />
+    <area data-nbmembre="9" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="1228,325,1278,400,1385,382,1363,352,1364,346,1336,309,1328,307,1228,325" href="stand3.html" />
+    <area data-nbmembre="10" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="455,324,447,325,441,403,564,384,562,308,538,312,530,291,459,304,456,325" href="stand3.html" />
+
+
+    <area data-nbmembre="11" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="639,253,643,296,636,297,642,370,756,351,744,280,727,283,718,240,637,253" href="stand3.html" />
+    <area data-nbmembre="12" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="822,267,812,270,832,339,953,318,927,248,906,250,901,234,821,246,823,267" href="stand3.html" />
+    <area data-nbmembre="13" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="1029,236,994,242,1023,306,1131,289,1095,224,1089,227,1052,212,1029,236" href="stand3.html" />
+    <area data-nbmembre="14" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="1254,199,1158,217,1199,278,1295,261,1254,200" href="stand3.html" />
+    <area data-nbmembre="15" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="463,209,461,218,452,279,563,263,562,204,544,205,541,198,463,208" href="stand3.html" />
+
+
+    <area data-nbmembre="16" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="641,163,642,183,644,191,628,194,632,249,735,236,724,181,709,182,704,155,642,163" href="stand3.html" />
+    <area data-nbmembre="17" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="786,172,803,228,913,212,892,158,863,161,844,156,834,165,787,171" href="stand3.html" />
+    <area data-nbmembre="18" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="972,124,970,147,952,150,977,203,1074,188,1045,135,1041,136,1025,126,1008,122,990,122,973,124" href="stand3.html" />
+    <area data-nbmembre="19" data-logo="images/sponsor-logo-big.gif" alt="Roche" title="Roche" shape="poly" coords="1106,95,1102,130,1134,179,1221,165,1209,151,1211,144,1204,135,1208,111,1196,96,1192,92,1191,89,1190,84,1107,95" href="stand3.html" />
+
+        
+    </map>
+
+</section>
+
+<style type="text/css">
+.accordion-container{
+  position: relative;
+  max-width: 500px;
+  height: auto;
+  margin: 10px auto;
+}
+.accordion-container > h2{
+  text-align: center;
+  color: #fff;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.set{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.set > a{
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+  background-color: #fcee20;
+}
+.set > a i{
+  float: right;
+  margin-top: 2px;
+}
+.set > a.active{
+  background-color:#fcee20;
+  color: #000;
+}
+.content{
+  background:rgba(5,130,212, .8);
+  display:none;
+  padding:15px;
+}
+.content ul li a.active{color:#fcee20 !important; font-weight: 500; text-decoration: underline;;}
+.content ul li a{color:#fff; line-height: 28px;}
+.content ul li a:hover{color:#fcee20; text-decoration: underline;}
+.content p{
+  padding: 10px 15px;
+  margin: 0;
+  color: #fff;
+}
+</style>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.mapify.js"></script>
+<script>
+$(window).load(function(e) {
+	var winHeight = $(window).height();
+	$("#enter-content-cont").css("height", winHeight);
+});
+
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+    
+    $("img[usemap]:first").mapify({
+        hoverClass: "drop-hover"
+    });
+    
+    $("img[usemap]:last").mapify({
+        popOver: {
+            content: function(zone){
+                return "<img src='"+zone.attr("data-logo")+ "' />" + "<strong>" +zone.attr("data-title")+ "</strong>";
+            },
+            delay: 0.7,
+            margin: "15px",
+            height: "130px",
+            width: "260px"
+        },
+        onAreaHighlight: function(){
+            console.log("onAreaHighlight callback");
+        },
+        onMapClear: function(){
+            console.log("onMapClear callback");
+        }
+    });
+    
+    $("#dynamicClassChange").click(function() {
+        $(this).attr("data-hover-class","hover-green");
+    });
+    
+});
+
+
+$(document).ready(function() {
+  $(".set > a").on("click", function() {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(this)
+        .siblings(".content")
+        .slideUp(200);
+      $(".set > a i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+    } else {
+      $(".set > a i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+      $(this)
+        .find("i")
+        .removeClass("fa-plus")
+        .addClass("fa-minus");
+      $(".set > a").removeClass("active");
+      $(this).addClass("active");
+      $(".content").slideUp(200);
+      $(this)
+        .siblings(".content")
+        .slideDown(200);
+    }
+  });
+});
+
+</script>
+</body>
+
+</html>
